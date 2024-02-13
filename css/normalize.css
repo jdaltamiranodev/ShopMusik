@@ -347,3 +347,11 @@ html {
   [hidden] {
     display: none;
   }
+
+  li{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  }
+
+ 
