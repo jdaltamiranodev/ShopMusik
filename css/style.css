@@ -58,68 +58,6 @@ img {
     max-width: 100%;
 }
 
-
-
-/* ///////////////////////////////////////////HEADER////////////////////////// */
-
-header{
-    display: flex;
-    justify-content: space-evenly;
-    
-}
-
-.imagen{
-background-image:url(/ShopMusik/img/img_jhon/logo.png);
-
-    width: 20%;
-height: 9rem;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-
-}
-
-.menu ul {
-    display: flex;
-    gap: 1rem;
-
-}
-.menu ul li a{
-  color: black;
-
-}
-
-
-
-/* ///////////////////////////////////////////HEADER////////////////////////// */
-
-header{
-    display: flex;
-    justify-content: space-evenly;
-    
-}
-
-.imagen{
-background-image:url(/ShopMusik/img/img_jhon/logo.png);
-
-    width: 20%;
-height: 9rem;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-
-}
-
-.menu ul {
-    display: flex;
-    gap: 1rem;
-
-}
-.menu ul li a{
-  color: black;
-
-}
-
 .banner-guitarra {
     max-height: 80rem;
 }
