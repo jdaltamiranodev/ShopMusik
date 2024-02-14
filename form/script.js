@@ -106,9 +106,15 @@ loginForm.addEventListener('submit', (e) =>{
    if (!validUser){
         return alert('Usuario y/o contraseña incorrectos!');
     }
-    alert(`Bienvenido ${validUser.name}`);
-    window.location.href = 'index2.html'
 
+    if (validUser.email === 'admin@gmail.com') { // Cambiar 'admin@example.com' por el email del usuario especial
+        alert('Bienvenido Administrador');
+        window.location.href = 'admin.html'; // Redirigir a una página especial para el usuario admin
+     } else {
+
+      alert(`Bienvenido ${validUser.name}`);
+      window.location.href = 'index2.html'
+     }
   
 });
 
@@ -136,4 +142,6 @@ if (indiceAEliminar >= 0 && indiceAEliminar < Users.length) {
     console.log('El índice especificado está fuera del rango del array de usuarios.');
 }
 */
+
+
 
