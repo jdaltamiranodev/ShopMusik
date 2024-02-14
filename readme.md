@@ -3,7 +3,7 @@
 # Integrantes
 
 * **Jhon Davila**
-* **Kelthoum DJ**
-* **Ana Iashvili**
 * **Jonathan Domínguez**
 * **David Altamirano**
+* **Kelthoum DJ**
+* **Ana Iashvili**
