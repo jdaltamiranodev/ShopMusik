@@ -24,10 +24,10 @@ body {
 
 
 /* Globales */
-.contenedor-principal {
-    /* max-width: 120rem;
-    width: 90%;  */
-}
+/* .contenedor-principal {
+    max-width: 120rem;
+    width: 90%; 
+} */
 
 a {
     text-decoration: none;
@@ -60,64 +60,86 @@ img {
 
 
 
-/* ///////////////////////////////////////////HEADER////////////////////////// */
+/* Header */
 
-header{
+.header{
+    height: 3rem;
+    background-color: var(--colorNegro);
+    color: var(--colorBlanco);
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center; */
+    /* border: .5rem solid red; */
+}
+
+.fecha-texto {
+    color: var(--colorBlanco);
+    margin-right: 5rem;
+    margin-top: 0;
+    font-size: 2.2rem;
+}
+
+.navegacion-principal {
+    background-color: var(--colorNegro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 5px 80px rgba(0, 0, 0, 0.3);
+    /* border: .5rem solid blue; */
+}
+
+.contenedor-logo {
+    max-width: 100%;
+    max-height: 100%;
+    margin:0 5rem 0 5rem;
+    /* border: .5rem solid purple; */
+}
+
+.logo-imagen {
+    width: 20rem;
+    height: 10rem;
+}
+
+.navegacion-lista {
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    /* border: .5rem solid red; */
+}
+
+.navegacion-lista-enlace {
+    color: var(--colorBlanco);
+    font-size: 2.5rem;
+}
+
+.contenedor-iconos {
+    /* flex-direction: column; */
+}
+
+.iconos-cont {
+    margin: 0 5rem auto auto;
     display: flex;
     justify-content: space-evenly;
-    
+    color: var(--colorBlanco);
+    width: 15rem;
+    color: var(--colorBlanco);
+    /* border: .5rem solid green; */
 }
 
-.imagen{
-background-image:url(/ShopMusik/img/img_jhon/logo.png);
-
-    width: 20%;
-height: 9rem;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-
+.iconos {
+    color: var(--colorBlanco);
+    font-size: 3rem;
+    margin: 0 1rem;
 }
 
-.menu ul {
-    display: flex;
-    gap: 1rem;
-
-}
-.menu ul li a{
-  color: black;
-
+.bi i {
+    height: 20rem;
+    width: 20rem;
 }
 
 
-
-/* ///////////////////////////////////////////HEADER////////////////////////// */
-
-header{
-    display: flex;
-    justify-content: space-evenly;
-    
-}
-
-.imagen{
-background-image:url(/ShopMusik/img/img_jhon/logo.png);
-
-    width: 20%;
-height: 9rem;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-
-}
-
-.menu ul {
-    display: flex;
-    gap: 1rem;
-
-}
-.menu ul li a{
-  color: black;
-
+.contenedor-banner {
+    margin-top: 7rem;
 }
 
 .banner-guitarra {
@@ -174,4 +196,33 @@ background-repeat: no-repeat;
     background-color: var(--colorBlanco);
     color: var(--colorPrimario);
     
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--colorNegro);
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenedor-horario {
+    
+}
+
+.correo {
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    /* border: .5rem solid red; */
+    align-items: center;
+}
+
+.contacto-texto {
+    color: var(--colorBlanco);
+    font-size: 2rem;
+}
+
+.correo-icono {
+    color: var(--colorBlanco);
+    font-size: 2rem;
 }
