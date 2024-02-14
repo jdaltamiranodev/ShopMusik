@@ -64,8 +64,9 @@ function register(){
 }
 
 
-
-//trabajando con registro
+/*a partir de aqui es el funcionamiento del registro y la autentificacion
+lo anterior es solo animacion */
+/////////////////**********trabajando con registro
 const signupForm = document.querySelector(".formulario_register" )
 signupForm.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -91,4 +92,48 @@ signupForm.addEventListener('submit', (e) =>{
     window.location.href = 'index.html'
 
  });
+
+ //*************trabajando con login 
+ const loginForm = document.querySelector('.formulario_login')
+loginForm.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    const email = document.querySelector('#emailLogin').value; 
+    const password = document.querySelector('#passwordLogin').value;
+   
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    const validUser = Users.find(user => user.email === email && user.password === password); 
+   
+   if (!validUser){
+        return alert('Usuario y/o contraseña incorrectos!');
+    }
+    alert(`Bienvenido ${validUser.name}`);
+    window.location.href = 'index2.html'
+
+  
+});
+
+
+
+/* Este codigo es para acceder al local storage y borrar segun la posicion del objeto del array
+
+/ Obtener el array de usuarios del localStorage
+const storedUsers = localStorage.getItem('users');
+const Users = storedUsers ? JSON.parse(storedUsers) : [];
+
+// Supongamos que quieres eliminar la cuenta en la posición 2 del array (índice 1)
+const indiceAEliminar = 1; // Índice de la cuenta a eliminar
+
+// Verificar si el índice está dentro del rango del array
+if (indiceAEliminar >= 0 && indiceAEliminar < Users.length) {
+    // Eliminar la cuenta del array
+    Users.splice(indiceAEliminar, 1);
+
+    // Guardar el array modificado de nuevo en localStorage
+    localStorage.setItem('users', JSON.stringify(Users));
+
+    console.log('La cuenta ha sido eliminada correctamente.');
+} else {
+    console.log('El índice especificado está fuera del rango del array de usuarios.');
+}
+*/
 
