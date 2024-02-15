@@ -150,7 +150,7 @@ img {
     margin-bottom: 2rem;
 }
 
-.contenedor-grid {
+.contenedor-productos {
     display: grid;
     grid-template-columns: repeat(3, 25%);
     justify-content: center;

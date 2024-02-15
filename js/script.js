@@ -165,7 +165,7 @@ const productos = [
     {
         id: "percusion-1",
         titulo: "percusion-1",
-        imagen: "img/percusion/01.jpg",
+        imagen: "img/percusion/01.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-1",
@@ -176,7 +176,7 @@ const productos = [
     {
         id: "percusion-2",
         titulo: "percusion-2",
-        imagen: "img/percusion/02.jpg",
+        imagen: "img/percusion/02.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-2",
@@ -187,10 +187,10 @@ const productos = [
     {
         id: "percusion-3",
         titulo: "percusion-3",
-        imagen: "img/percusion/03.jpg",
+        imagen: "img/percusion/03.jpeg",
         descripcion: "",
         categoria: {
-            nombre: "vienpercusionto-3",
+            nombre: "percusion-3",
             id: "percusion"
         },
         precio: 1000
@@ -198,7 +198,7 @@ const productos = [
     {
         id: "percusion-4",
         titulo: "percusion-4",
-        imagen: "img/percusion/04.jpg",
+        imagen: "img/percusion/04.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-4",
@@ -209,7 +209,7 @@ const productos = [
     {
         id: "percusion-5",
         titulo: "percusion-5",
-        imagen: "img/percusion/05.jpg",
+        imagen: "img/percusion/05.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-5",
@@ -220,7 +220,7 @@ const productos = [
     {
         id: "percusion-6",
         titulo: "percusion-6",
-        imagen: "img/percusion/06.jpg",
+        imagen: "img/percusion/06.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-6",
@@ -228,4 +228,67 @@ const productos = [
         },
         precio: 1000
     }
-]
+];
+
+const contenedorProductos = document.querySelector("#contenedor-productos");
+
+const tituloProducto = document.querySelector("#titulo-producto");
+
+let botonesAgregar = document.querySelectorAll("#agregar-producto-carrito");
+
+function cargarProductos(productosElegidos) {
+    /* const {} = productos;
+    contenedorProductos.innerHTML = ""; */
+    
+    productosElegidos.forEach(producto => {
+        console.log(producto.titulo);
+
+        let contenedorProducto = document.createElement("div");
+        contenedorProducto.classList.add("contenedor-producto");
+        contenedorProducto.id = "contenedor-producto";
+
+
+        let contenedorImagen = document.createElement("img");
+        contenedorImagen.classList.add("contenedor-producto-imagen");
+        contenedorImagen.id = "contenedor-producto-imagen";
+        contenedorImagen.src = producto.imagen;
+
+        
+        let tituloProducto = document.createElement("p");
+        tituloProducto.classList.add("titulo-producto");
+        tituloProducto.id = "titulo-producto";
+
+        let btnCarrito = document.createElement("button");
+        btnCarrito.classList.add("agregar-producto-carrito");
+        btnCarrito.id = "agregar-producto-carrito";
+        btnCarrito.textContent = "Agregar al carrito";
+
+        let icono = document.createElement("i");
+        icono.classList.add("bi");
+        icono.classList.add("bi-cart3")
+
+        tituloProducto.textContent = producto.titulo;
+
+        console.log(tituloProducto)
+
+        contenedorProducto.appendChild(contenedorImagen);
+        console.log(contenedorProducto);
+        contenedorProducto.appendChild(tituloProducto);
+        contenedorProducto.appendChild(btnCarrito);
+        contenedorProducto.appendChild(icono);
+
+        contenedorProductos.appendChild(contenedorProducto);
+
+        /* div.innerHTML = `
+            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+            <div class="producto-detalles">
+                <h3 class="producto-titulo">${producto.titulo}</h3>
+                <p class="producto-precio">${producto.precio}</p>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            </div><!-- .producto-detalles -->
+        `
+        contenedorProductos.append(div); */
+    })
+}
+
+cargarProductos(productos);  
