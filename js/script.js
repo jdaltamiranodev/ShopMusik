@@ -1,3 +1,31 @@
+
+
+//script para la fecha
+ const $fecha = document.querySelector('.fecha');
+
+function digitalClock(){
+    let f = new Date(),
+    dia = f.getDate(),
+    mes = f.getMonth(),
+    anio = f.getFullYear(),
+    diaSemana = f.getDay();
+    
+    dia = ('0' + dia).slice(-2);
+
+    let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Sábado'];
+    let showSemana = (semana[diaSemana]);
+
+    let mesAnio = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+    let showMes = (mesAnio[mes]);
+
+    document.querySelector('.fecha').innerHTML = `${showSemana} ${dia} de ${showMes} de ${anio}`
+} 
+
+setInterval(() => {
+    digitalClock()
+
+}, 1000);
+
 const productos = [
     // Instrumentos de viento
     {
@@ -137,7 +165,7 @@ const productos = [
     {
         id: "percusion-1",
         titulo: "percusion-1",
-        imagen: "img/percusion/01.jpg",
+        imagen: "img/percusion/01.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-1",
@@ -148,7 +176,7 @@ const productos = [
     {
         id: "percusion-2",
         titulo: "percusion-2",
-        imagen: "img/percusion/02.jpg",
+        imagen: "img/percusion/02.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-2",
@@ -159,7 +187,7 @@ const productos = [
     {
         id: "percusion-3",
         titulo: "percusion-3",
-        imagen: "img/percusion/03.jpg",
+        imagen: "img/percusion/03.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-3",
@@ -170,7 +198,7 @@ const productos = [
     {
         id: "percusion-4",
         titulo: "percusion-4",
-        imagen: "img/percusion/04.jpg",
+        imagen: "img/percusion/04.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-4",
@@ -181,7 +209,7 @@ const productos = [
     {
         id: "percusion-5",
         titulo: "percusion-5",
-        imagen: "img/percusion/05.jpg",
+        imagen: "img/percusion/05.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-5",
@@ -192,7 +220,7 @@ const productos = [
     {
         id: "percusion-6",
         titulo: "percusion-6",
-        imagen: "img/percusion/06.jpg",
+        imagen: "img/percusion/06.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-6",
