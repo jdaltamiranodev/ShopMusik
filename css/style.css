@@ -201,6 +201,19 @@ img {
     
 }
 
+/* Amplificador */
+.contenedor-amplificador{
+    height: 10;
+    margin: 10rem 0 30rem 0;
+}
+
+.amplificaror {
+    height: 50rem;
+    width: 100%;
+}
+
+/* a */
+
 /* Footer */
 
 .footer {
