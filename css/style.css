@@ -256,21 +256,24 @@ h2, h3, h4, h5, p {
     color: gray;
     
 }
-.name  h3, h4, h5, p{
+.name  h3, h5, p{
     margin-top: 0rem;
     margin-bottom: 0;
 }
 .name h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 0;
 }
 .name h3, .caracteristicas h3{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
-.name p, .caracteristicas p {
-    font-size: 0.8rem;
+.name p {
+    font-size: 1rem;
     
 } 
+.name h5 {
+    font-size: 1.5rem;
+}
     
 
 span {
@@ -282,9 +285,9 @@ span {
     justify-content: center;
 }
 
-.photo {
+#mainPhoto {
     margin: 0;
-    width: 42rem; 
+    width: 49rem; 
     height: auto; 
     transition: width 0.3s ease; 
     
@@ -302,6 +305,9 @@ span {
 
 .caracteristicas h3 {
     margin: 1rem;
+}
+.caracteristicas p {
+    font-size: 1.3rem;
 }
 .cart {
     padding-left: 4rem;
@@ -346,9 +352,7 @@ span {
     display: flex;
     justify-content: space-evenly;
 }
-.contenedor-horario {
-    
-}
+
 
 .correo {
     width: 25rem;
