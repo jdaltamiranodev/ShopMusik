@@ -165,7 +165,7 @@ const productos = [
     {
         id: "percusion-1",
         titulo: "percusion-1",
-        imagen: "img/percusion/01.jpg",
+        imagen: "img/percusion/01.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-1",
@@ -176,7 +176,7 @@ const productos = [
     {
         id: "percusion-2",
         titulo: "percusion-2",
-        imagen: "img/percusion/02.jpg",
+        imagen: "img/percusion/02.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-2",
@@ -187,7 +187,7 @@ const productos = [
     {
         id: "percusion-3",
         titulo: "percusion-3",
-        imagen: "img/percusion/03.jpg",
+        imagen: "img/percusion/03.jpeg",
         descripcion: "",
         categoria: {
             nombre: "vienpercusionto-3",
@@ -198,7 +198,7 @@ const productos = [
     {
         id: "percusion-4",
         titulo: "percusion-4",
-        imagen: "img/percusion/04.jpg",
+        imagen: "img/percusion/04.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-4",
@@ -209,7 +209,7 @@ const productos = [
     {
         id: "percusion-5",
         titulo: "percusion-5",
-        imagen: "img/percusion/05.jpg",
+        imagen: "img/percusion/05.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-5",
@@ -220,7 +220,7 @@ const productos = [
     {
         id: "percusion-6",
         titulo: "percusion-6",
-        imagen: "img/percusion/06.jpg",
+        imagen: "img/percusion/06.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-6",
