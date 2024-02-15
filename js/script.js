@@ -19,7 +19,12 @@ function digitalClock(){
     let showMes = (mesAnio[mes]);
 
     document.querySelector('.fecha').innerHTML = `${showSemana} ${dia} de ${showMes} de ${anio}`
-}  
+} 
+
+setInterval(() => {
+    digitalClock()
+
+}, 1000);
 
 const productos = [
     // Instrumentos de viento
