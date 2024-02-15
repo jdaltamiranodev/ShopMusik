@@ -3,7 +3,7 @@ const productos = [
     {
         id: "viento-1",
         titulo: "viento-1",
-        imagen: "img/viento/viento1.jpg",
+        imagen: "img/viento/01.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-1",
@@ -14,7 +14,7 @@ const productos = [
     {
         id: "viento-2",
         titulo: "viento-2",
-        imagen: "img/viento/viento2.jpg",
+        imagen: "img/viento/02.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-2",
@@ -25,7 +25,7 @@ const productos = [
     {
         id: "viento-3",
         titulo: "viento-3",
-        imagen: "img/viento/viento3.jpg",
+        imagen: "img/viento/03.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-3",
@@ -36,7 +36,7 @@ const productos = [
     {
         id: "viento-4",
         titulo: "viento-4",
-        imagen: "img/viento/viento4.jpg",
+        imagen: "img/viento/04.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-4",
@@ -47,7 +47,7 @@ const productos = [
     {
         id: "viento-5",
         titulo: "viento-5",
-        imagen: "img/viento/viento5.jpg",
+        imagen: "img/viento/05.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-5",
@@ -58,7 +58,7 @@ const productos = [
     {
         id: "viento-6",
         titulo: "viento-6",
-        imagen: "img/viento/viento6.jpg",
+        imagen: "img/viento/06.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-6",
