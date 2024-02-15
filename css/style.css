@@ -34,7 +34,7 @@ a {
 }
 
 h1, h2, h3, h4 {
-    font-family: var(--fuenteHeading);
+    font-family: Helvetica, sans-serif;
     line-height: 1.2;
 }
 
@@ -209,7 +209,134 @@ img {
     width: 100%;
 }
 
-/* a */
+/* Seccion Info Producto ANA  */
+.info {
+    display: flex;
+    justify-content: center;
+    border: 0.2rem solid #2C2C2C;
+    
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5rem,1fr; 
+    column-gap: 0.1rem;
+    row-gap: 0.1rem;
+    width: 80%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 15px 9px rgba(0, 0, 0, 0.2);
+   
+}
+.grid div {
+    border: 0.2rem solid   #9A9A9A;
+}
+
+
+.marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.marca img {
+    width: 11rem;
+}
+h2, h3, h4, h5, p {
+    font-family: Helvetica, sans-serif;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name p, .name h5, .caracteristicas p {
+    color: gray;
+    
+}
+.name  h3, h4, h5, p{
+    margin-top: 0rem;
+    margin-bottom: 0;
+}
+.name h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+.name h3, .caracteristicas h3{
+    font-size: 1.2rem;
+}
+.name p, .caracteristicas p {
+    font-size: 0.8rem;
+    
+} 
+    
+
+span {
+    color: #D22A1E;;
+}
+
+#photoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.photo {
+    margin: 0;
+    width: 42rem; 
+    height: auto; 
+    transition: width 0.3s ease; 
+    
+  }
+
+
+
+  .caracteristicas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.caracteristicas h3 {
+    margin: 1rem;
+}
+.cart {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #D22A1E;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+}
+.cart:hover {
+    transform: scale(1.1); 
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .grid {
+      width: 100%; 
+      grid-template-columns: 1fr;
+      grid-template-rows: auto; 
+      
+    }
+    .photo {
+        width: 25rem;
+      }
+  }
+
+  /* Seccion Info Producto ANA  FIN*/ 
+  
 
 /* Footer */
 
