@@ -261,11 +261,10 @@ function cargarProductos(productosElegidos) {
         let btnCarrito = document.createElement("button");
         btnCarrito.classList.add("agregar-producto-carrito");
         btnCarrito.id = "agregar-producto-carrito";
-        btnCarrito.textContent = "Agregar al carrito";
+        btnCarrito.textContent = "Agregar al carrito ";
 
         let icono = document.createElement("i");
-        icono.classList.add("bi");
-        icono.classList.add("bi-cart3")
+        icono.classList.add("bi", "bi-cart3");
 
         tituloProducto.textContent = producto.titulo;
 
@@ -275,7 +274,7 @@ function cargarProductos(productosElegidos) {
         console.log(contenedorProducto);
         contenedorProducto.appendChild(tituloProducto);
         contenedorProducto.appendChild(btnCarrito);
-        contenedorProducto.appendChild(icono);
+        btnCarrito.appendChild(icono);
 
         contenedorProductos.appendChild(contenedorProducto);
 
