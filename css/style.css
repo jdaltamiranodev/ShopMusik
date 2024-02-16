@@ -58,24 +58,6 @@ img {
     max-width: 100%;
 }
 
-
-
-/* Header */
-
-<<<<<<< HEAD
-=======
-/* .header{
-    height: 3rem;
-    background-color: var(--colorNegro);
-    color: var(--colorBlanco);
-    display: flex;
-    justify-content: flex-end;
-    /* align-items: center; */
-    /* border: .5rem solid red; */
-
->>>>>>> kelthoum
-
-
  .fecha-texto {
     color: var(--colorBlanco);
     margin-right: 5rem;
@@ -121,10 +103,6 @@ img {
     font-size: 2.5rem;
 }
 
-.contenedor-iconos {
-    /* flex-direction: column; */
-}
-
 .iconos-cont {
     margin: 0 5rem auto auto;
     display: flex;
@@ -132,7 +110,6 @@ img {
     color: var(--colorBlanco);
     width: 15rem;
     color: var(--colorBlanco);
-    /* border: .5rem solid green; */
 }
 
 .iconos {
