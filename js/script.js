@@ -12,13 +12,13 @@ function digitalClock(){
     
     dia = ('0' + dia).slice(-2);
 
-    let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves','Viernes', 'Sábado'];
+    let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves','V', 'Sábado'];
     let showSemana = (semana[diaSemana]);
 
     let mesAnio = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
     let showMes = (mesAnio[mes]);
 
-    document.querySelector('.fecha').innerHTML = `${showSemana} ${dia} de ${showMes} de ${anio}`
+    document.querySelector('.fecha').innerHTML = `${showSemana} ${dia} ${showMes} ${anio}`
 } 
 
 setInterval(() => {

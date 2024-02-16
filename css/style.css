@@ -29,6 +29,22 @@ body {
     width: 90%; 
 } */
 
+
+/*estilos para boton hamburguesa*/
+.bars_menu{
+ display: none;
+ 
+}
+
+
+
+
+/*hasta aqui esta encapsuldo estilos boton de hamburgueas*/
+
+
+.navegacion-principal li {
+  text-align: none;
+}
 a {
     text-decoration: none;
 }
@@ -89,7 +105,7 @@ img {
     max-width: 100%;
     max-height: 100%;
     margin:0 5rem 0 5rem;
-    /* border: .5rem solid purple; */
+    
 }
 
 .logo-imagen {
@@ -109,9 +125,7 @@ img {
     font-size: 2.5rem;
 }
 
-.contenedor-iconos {
-    /* flex-direction: column; */
-}
+
 
 .iconos-cont {
     margin: 0 5rem auto auto;
@@ -286,6 +300,91 @@ img {
 
 
   /*RESPONSIVE*/
+
+
+/*aqui el responsive del header*/
+@media (max-width: 428px){
+.navegacion-principal{
+    height:9rem;
+  }
+  
+.bars_menu{
+    width: 6rem;
+    height: 5rem;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: block;
+    margin-left: 3rem;
+    margin-top: 6rem;
+  }
+
+  .bars_menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--colorPrimario);
+    margin-top: 6px; 
+    transform-origin: 0px 100%;
+    transition: all 600ms;
+  } .activeline1_bars-menu{
+    transform: rotate(45deg) translate(-2px, 1px);
+  }
+  
+  .activeline2_bars-menu{
+    opacity: 0;
+    margin-left: -5px;
+  }
+  
+  .activeline3_bars-menu{
+    transform: rotate(-45deg) translate(-4px, 2px);
+  }
+/*hasta aqui es hamburguesa*/
+
+
+  
+.contenedor-iconos-fecha{
+    display: block;
+    width: 30%;   
+    height: 100%;
+  }
+.fecha-texto{
+    width: 90%;
+  }
+
+.fecha{
+    font-size: 1rem;
+  }
+.iconos-cont{
+    display: flex;
+    gap: 2rem;
+    justify-content: unset;
+  }
+.iconos{
+   font-size: 2rem;
+   margin: 0 0;
+   padding: 0 0;
+   }
+.navegacion-lista{
+    display: none;
+  }
+.navegacion-listaham {
+ margin-top: -0rem;
+  width: 100%;
+  background-color: #000000;
+  position: absolute;
+  display: flex;
+}
+.navegacion-listaham a {
+  font-size: 2rem;
+   color: white;
+ }
+}
+
+
+
+/*hasta responsive del header*/
+
+
   @media only screen and (min-width: 1280px) {
     .contain {
        
@@ -358,26 +457,3 @@ img {
   }
 
 
-/* .footer {
-    background-color: var(--colorNegro);
-    
-}
-
-
-.correo {
-    width: 25rem;
-    display: flex;
-    justify-content: space-between;
-    /* border: .5rem solid red; 
-    align-items: center;
-}
-
-.contacto-texto {
-    color: var(--colorBlanco);
-    font-size: 2rem;
-}
-
-.correo-icono {
-    color: var(--colorBlanco);
-    font-size: 2rem;
-} */
