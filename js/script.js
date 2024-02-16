@@ -338,6 +338,7 @@ function agregarAlCarrito(e) {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 console.log(productosEnCarrito)
+
 /* function actualizarBotonesAgregar(){
     botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
 
