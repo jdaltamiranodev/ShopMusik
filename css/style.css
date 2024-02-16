@@ -62,7 +62,7 @@ img {
 
 /* Header */
 
-.header{
+/* .header{
     height: 3rem;
     background-color: var(--colorNegro);
     color: var(--colorBlanco);
@@ -70,7 +70,7 @@ img {
     justify-content: flex-end;
     /* align-items: center; */
     /* border: .5rem solid red; */
-}
+
 
 .fecha-texto {
     color: var(--colorBlanco);
