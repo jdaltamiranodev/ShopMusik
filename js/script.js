@@ -27,73 +27,7 @@ setInterval(() => {
 }, 1000);
 
 const productos = [
-    // Instrumentos de viento
-    {
-        id: "viento-1",
-        titulo: "viento-1",
-        imagen: "img/viento/01.jpeg",
-        descripcion: "",
-        categoria: {
-            nombre: "viento-1",
-            id: "viento"
-        },
-        precio: 1000
-    },
-    {
-        id: "viento-2",
-        titulo: "viento-2",
-        imagen: "img/viento/02.jpeg",
-        descripcion: "",
-        categoria: {
-            nombre: "viento-2",
-            id: "viento"
-        },
-        precio: 1000
-    },
-    {
-        id: "viento-3",
-        titulo: "viento-3",
-        imagen: "img/viento/03.jpeg",
-        descripcion: "",
-        categoria: {
-            nombre: "viento-3",
-            id: "viento"
-        },
-        precio: 1000
-    },
-    {
-        id: "viento-4",
-        titulo: "viento-4",
-        imagen: "img/viento/04.jpeg",
-        descripcion: "",
-        categoria: {
-            nombre: "viento-4",
-            id: "viento"
-        },
-        precio: 1000
-    },
-    {
-        id: "viento-5",
-        titulo: "viento-5",
-        imagen: "img/viento/05.jpeg",
-        descripcion: "",
-        categoria: {
-            nombre: "viento-5",
-            id: "viento"
-        },
-        precio: 1000
-    },
-    {
-        id: "viento-6",
-        titulo: "viento-6",
-        imagen: "img/viento/06.jpeg",
-        descripcion: "",
-        categoria: {
-            nombre: "viento-6",
-            id: "viento"
-        },
-        precio: 1000
-    },
+    
     // Instrumentos de cuerda
     {
         id: "cuerda-1",
@@ -158,6 +92,73 @@ const productos = [
         categoria: {
             nombre: "cuerda-6",
             id: "cuerda"
+        },
+        precio: 1000
+    },
+    // Instrumentos de viento
+    {
+        id: "viento-1",
+        titulo: "viento-1",
+        imagen: "img/viento/01.jpeg",
+        descripcion: "",
+        categoria: {
+            nombre: "viento-1",
+            id: "viento"
+        },
+        precio: 1000
+    },
+    {
+        id: "viento-2",
+        titulo: "viento-2",
+        imagen: "img/viento/02.jpeg",
+        descripcion: "",
+        categoria: {
+            nombre: "viento-2",
+            id: "viento"
+        },
+        precio: 1000
+    },
+    {
+        id: "viento-3",
+        titulo: "viento-3",
+        imagen: "img/viento/03.jpeg",
+        descripcion: "",
+        categoria: {
+            nombre: "viento-3",
+            id: "viento"
+        },
+        precio: 1000
+    },
+    {
+        id: "viento-4",
+        titulo: "viento-4",
+        imagen: "img/viento/04.jpeg",
+        descripcion: "",
+        categoria: {
+            nombre: "viento-4",
+            id: "viento"
+        },
+        precio: 1000
+    },
+    {
+        id: "viento-5",
+        titulo: "viento-5",
+        imagen: "img/viento/05.jpeg",
+        descripcion: "",
+        categoria: {
+            nombre: "viento-5",
+            id: "viento"
+        },
+        precio: 1000
+    },
+    {
+        id: "viento-6",
+        titulo: "viento-6",
+        imagen: "img/viento/06.jpeg",
+        descripcion: "",
+        categoria: {
+            nombre: "viento-6",
+            id: "viento"
         },
         precio: 1000
     },
@@ -234,14 +235,11 @@ const contenedorProductos = document.querySelector("#contenedor-productos");
 
 const tituloProducto = document.querySelector("#titulo-producto");
 
-let botonesAgregar = document.querySelectorAll("#agregar-producto-carrito");
+let botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
 
 function cargarProductos(productosElegidos) {
-    /* const {} = productos;
-    contenedorProductos.innerHTML = ""; */
     
     productosElegidos.forEach(producto => {
-        console.log(producto.titulo);
 
         let contenedorProducto = document.createElement("div");
         contenedorProducto.classList.add("contenedor-producto");
@@ -250,17 +248,18 @@ function cargarProductos(productosElegidos) {
 
         let contenedorImagen = document.createElement("img");
         contenedorImagen.classList.add("contenedor-producto-imagen");
-        contenedorImagen.id = "contenedor-producto-imagen";
+        /* contenedorImagen.id = "contenedor-producto-imagen"; */
         contenedorImagen.src = producto.imagen;
+        contenedorImagen.alt = producto.titulo;
 
         
         let tituloProducto = document.createElement("p");
         tituloProducto.classList.add("titulo-producto");
-        tituloProducto.id = "titulo-producto";
+        tituloProducto.id = producto.titulo;
 
         let btnCarrito = document.createElement("button");
         btnCarrito.classList.add("agregar-producto-carrito");
-        btnCarrito.id = "agregar-producto-carrito";
+        btnCarrito.id = producto.id;
         btnCarrito.textContent = "Agregar al carrito ";
 
         let icono = document.createElement("i");
@@ -268,10 +267,7 @@ function cargarProductos(productosElegidos) {
 
         tituloProducto.textContent = producto.titulo;
 
-        console.log(tituloProducto)
-
         contenedorProducto.appendChild(contenedorImagen);
-        console.log(contenedorProducto);
         contenedorProducto.appendChild(tituloProducto);
         contenedorProducto.appendChild(btnCarrito);
         btnCarrito.appendChild(icono);
@@ -288,6 +284,46 @@ function cargarProductos(productosElegidos) {
         `
         contenedorProductos.append(div); */
     })
+
+    actualizarBotonesAgregar();
 }
 
 cargarProductos(productos);  
+
+function actualizarBotonesAgregar(){
+    botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
+    
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', agregarAlCarrito);
+    })
+}
+
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+
+if(productosEnCarritoLS){
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    /* actualizarNumerito(); */
+}else{
+    productosEnCarrito = [];
+}
+
+function agregarAlCarrito(e){
+    const idBoton = e.currentTarget.id;
+    console.log(idBoton)
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+
+    if(productosEnCarrito.some(producto => producto.id === idBoton)){
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
+    }else{
+        /* productoAgregado.cantidad = 1; */
+        productosEnCarrito.push(productoAgregado);
+    }
+
+    //actualizarNumerito();
+    
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
