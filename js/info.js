@@ -34,21 +34,5 @@ const photoContainer = document.getElementById('photoContainer');
  
 
 
-  // const productTitles = [
-  //  "Product 1",
-    //"Product 2",
-   // "Product 3"
-//];
-
-
-//const tituloInstrumento = document.querySelector('.titulo-instrumento');
-
-
-//if (tituloInstrumento) {
-    
- //   const randomIndex = Math.floor(Math.random() * productTitles.length);
-  //  tituloInstrumento.textContent = productTitles[randomIndex];
-//} else {
-    //console.error("Element with class 'titulo-instrumento' not found.");
-//}
+  
  
