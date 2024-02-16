@@ -12,7 +12,7 @@ function digitalClock(){
     
     dia = ('0' + dia).slice(-2);
 
-    let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Sábado'];
+    let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves','Viernes', 'Sábado'];
     let showSemana = (semana[diaSemana]);
 
     let mesAnio = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
