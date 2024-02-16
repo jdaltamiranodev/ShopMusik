@@ -238,17 +238,18 @@ const tituloProducto = document.querySelector("#titulo-producto");
 let botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
 
 function cargarProductos(productosElegidos) {
+
+    contenedorProductos.innerHTML = "";
     
     productosElegidos.forEach(producto => {
 
-        let contenedorProducto = document.createElement("div");
+        /* let contenedorProducto = document.createElement("div");
         contenedorProducto.classList.add("contenedor-producto");
         contenedorProducto.id = "contenedor-producto";
 
 
         let contenedorImagen = document.createElement("img");
         contenedorImagen.classList.add("contenedor-producto-imagen");
-        /* contenedorImagen.id = "contenedor-producto-imagen"; */
         contenedorImagen.src = producto.imagen;
         contenedorImagen.alt = producto.titulo;
 
@@ -269,20 +270,27 @@ function cargarProductos(productosElegidos) {
 
         contenedorProducto.appendChild(contenedorImagen);
         contenedorProducto.appendChild(tituloProducto);
-        contenedorProducto.appendChild(btnCarrito);
         btnCarrito.appendChild(icono);
+        contenedorProducto.appendChild(btnCarrito);
+        
 
-        contenedorProductos.appendChild(contenedorProducto);
+        contenedorProductos.appendChild(contenedorProducto); */
 
-        /* div.innerHTML = `
-            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
+        
+
+        const div = document.createElement("div");
+        div.classList.add("contenedor-producto-imagen");
+
+        div.innerHTML = `
+            <img class="contenedor-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="producto-detalles">
-                <h3 class="producto-titulo">${producto.titulo}</h3>
-                <p class="producto-precio">${producto.precio}</p>
-                <button class="producto-agregar" id="${producto.id}">Agregar</button>
-            </div><!-- .producto-detalles -->
+                <p class="titulo-producto">${producto.titulo}</p>
+                
+                <button class="agregar-producto-carrito" id="${producto.id}">Añadir al carrito <i class="bi bi-cart3"></i></button>
+            </div>
         `
-        contenedorProductos.append(div); */
+        /* <p class="producto-precio">${producto.precio}</p> */
+        contenedorProductos.append(div);
     })
 
     actualizarBotonesAgregar();
@@ -290,9 +298,8 @@ function cargarProductos(productosElegidos) {
 
 cargarProductos(productos);  
 
-function actualizarBotonesAgregar(){
+function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
-    
 
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito);
@@ -305,25 +312,95 @@ let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
 if(productosEnCarritoLS){
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
-    /* actualizarNumerito(); */
+    //actualizarNumerito();
 }else{
     productosEnCarrito = [];
 }
 
-function agregarAlCarrito(e){
+
+function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;
-    console.log(idBoton)
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 
     if(productosEnCarrito.some(producto => producto.id === idBoton)){
         const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        console.log(`${idBoton} ya esta en el carrito`)
         productosEnCarrito[index].cantidad++;
     }else{
-        /* productoAgregado.cantidad = 1; */
+        productoAgregado.cantidad = 1;
         productosEnCarrito.push(productoAgregado);
+        console.log(`${idBoton} No esta en el carrito`)
     }
+    console.log(productosEnCarrito)
 
     //actualizarNumerito();
     
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
+console.log(productosEnCarrito)
+/* function actualizarBotonesAgregar(){
+    botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
+
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', agregarAlCarrito);
+    })
+}
+
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+console.log(productosEnCarritoLS);
+
+if(productosEnCarritoLS){
+    productosEnCarrito = JSON.parse(productosEnCarritoLS);
+}else{
+    productosEnCarrito = [];
+}
+
+function agregarAlCarrito(e) {
+    const idBoton = e.currentTarget.id;
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    console.log(productoAgregado)
+
+    if(productoAgregado) { 
+        const productoEnCarrito = productosEnCarrito.find(producto => producto.id === idBoton);
+        
+        if(productoEnCarrito){
+            productoEnCarrito.cantidad++;
+        } else {
+            productoAgregado.cantidad = 1;
+            productosEnCarrito.push(productoAgregado);
+        }
+        
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    }
+} */
+
+/* function agregarAlCarrito(e){
+    const idBoton = e.currentTarget.id;
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    console.log(productosEnCarrito);
+
+    if (productoAgregado) {
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
+        console.log(productosEnCarrito);
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    } else {
+        console.error("No se encontró ningún producto con el ID proporcionado.");
+    } */
+    
+    /* if(productosEnCarrito.some(producto => producto.id === idBoton)){
+        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
+        productosEnCarrito[index].cantidad++;
+    }else{
+        productoAgregado.cantidad = 1;
+        productosEnCarrito.push(productoAgregado);
+    } */
+    /* console.log(productosEnCarrito)
+
+    //actualizarNumerito();
+    
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+} */
