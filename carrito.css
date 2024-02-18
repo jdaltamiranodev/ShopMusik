@@ -42,9 +42,6 @@
      
       justify-content: center; 
       gap: 5rem;
-      
-  
-      
        }
   
   .caja_carrito{ width: 30rem;
@@ -107,9 +104,7 @@
       img{ width: 50%;
         height: 50%;
         margin: 3rem;
-        
         background-color:var(--colorBlanco);
         }
-      
     }
-  
+      /* Página Carrito - Kelthoum - FIN */
