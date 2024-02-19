@@ -170,7 +170,7 @@ const productos = [
     {
         id: "viento-5",
         titulo: "viento-5",
-        imagen: "img/viento/05.jpg",
+        imagen: "img/viento/05.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-5",
@@ -226,7 +226,7 @@ const productos = [
     {
         id: "percusion-4",
         titulo: "percusion-4",
-        imagen: "img/percusion/04.jpg",
+        imagen: "img/percusion/04.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-4",
