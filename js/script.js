@@ -126,7 +126,7 @@ const productos = [
     {
         id: "viento-1",
         titulo: "viento-1",
-        imagen: "img/viento/01.jpeg",
+        imagen: "img/viento/01.jpg",
         descripcion: "",
         categoria: {
             nombre: "viento-1",
@@ -137,7 +137,7 @@ const productos = [
     {
         id: "viento-2",
         titulo: "viento-2",
-        imagen: "img/viento/02.jpeg",
+        imagen: "img/viento/02.jpg",
         descripcion: "",
         categoria: {
             nombre: "viento-2",
@@ -148,7 +148,7 @@ const productos = [
     {
         id: "viento-3",
         titulo: "viento-3",
-        imagen: "img/viento/03.jpeg",
+        imagen: "img/viento/03.jpg",
         descripcion: "",
         categoria: {
             nombre: "viento-3",
@@ -159,7 +159,7 @@ const productos = [
     {
         id: "viento-4",
         titulo: "viento-4",
-        imagen: "img/viento/04.jpeg",
+        imagen: "img/viento/04.jpg",
         descripcion: "",
         categoria: {
             nombre: "viento-4",
@@ -170,7 +170,7 @@ const productos = [
     {
         id: "viento-5",
         titulo: "viento-5",
-        imagen: "img/viento/05.jpeg",
+        imagen: "img/viento/05.jpg",
         descripcion: "",
         categoria: {
             nombre: "viento-5",
@@ -181,7 +181,7 @@ const productos = [
     {
         id: "viento-6",
         titulo: "viento-6",
-        imagen: "img/viento/06.jpeg",
+        imagen: "img/viento/06.jpg",
         descripcion: "",
         categoria: {
             nombre: "viento-6",
@@ -193,7 +193,7 @@ const productos = [
     {
         id: "percusion-1",
         titulo: "percusion-1",
-        imagen: "img/percusion/01.jpeg",
+        imagen: "img/percusion/01.jpg",
         descripcion: "",
         categoria: {
             nombre: "percusion-1",
@@ -204,7 +204,7 @@ const productos = [
     {
         id: "percusion-2",
         titulo: "percusion-2",
-        imagen: "img/percusion/02.jpeg",
+        imagen: "img/percusion/02.jpg",
         descripcion: "",
         categoria: {
             nombre: "percusion-2",
@@ -215,7 +215,7 @@ const productos = [
     {
         id: "percusion-3",
         titulo: "percusion-3",
-        imagen: "img/percusion/03.jpeg",
+        imagen: "img/percusion/03.jpg",
         descripcion: "",
         categoria: {
             nombre: "percusion-3",
@@ -226,7 +226,7 @@ const productos = [
     {
         id: "percusion-4",
         titulo: "percusion-4",
-        imagen: "img/percusion/04.jpeg",
+        imagen: "img/percusion/04.jpg",
         descripcion: "",
         categoria: {
             nombre: "percusion-4",
@@ -237,7 +237,7 @@ const productos = [
     {
         id: "percusion-5",
         titulo: "percusion-5",
-        imagen: "img/percusion/05.jpeg",
+        imagen: "img/percusion/05.jpg",
         descripcion: "",
         categoria: {
             nombre: "percusion-5",
@@ -248,7 +248,7 @@ const productos = [
     {
         id: "percusion-6",
         titulo: "percusion-6",
-        imagen: "img/percusion/06.jpeg",
+        imagen: "img/percusion/06.jpg",
         descripcion: "",
         categoria: {
             nombre: "percusion-6",
@@ -306,17 +306,22 @@ function cargarProductos(productosElegidos) {
         
 
         const div = document.createElement("div");
-        div.classList.add("contenedor-producto-imagen");
+        div.classList.add("contenedor-producto");
 
         div.innerHTML = `
             <img class="contenedor-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="producto-detalles">
                 <p class="titulo-producto">${producto.titulo}</p>
-                
+                <p class="producto-precio">${producto.precio},00 €</p>
+                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
+                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
+                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
+                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
+                </div>
                 <button class="agregar-producto-carrito" id="${producto.id}">Añadir al carrito <i class="bi bi-cart3"></i></button>
             </div>
         `
-        /* <p class="producto-precio">${producto.precio}</p> */
+        
         contenedorProductos.append(div);
     })
 
@@ -365,6 +370,7 @@ function agregarAlCarrito(e) {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 console.log(productosEnCarrito)
+
 /* function actualizarBotonesAgregar(){
     botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
 
