@@ -7,7 +7,7 @@
     <title>Página Carrito</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="carrito.css">
+    <!-- <link rel="stylesheet" href="carrito.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -49,7 +49,7 @@
                  <h2>guitarra YAMAHA</h2>
       
                   <h1>779,00€</h1>
-                  <p>IVA INCLUIDO</p>
+                  <p class="iva">IVA INCLUIDO</p>
                 </div>
       
                 <div class="icons_cart">
@@ -127,47 +127,7 @@
 
 
     </div>
-    <script>
-        // Obtener elementos del DOM
-        const menosButton = document.querySelector('.menos');
-        const plusButton = document.querySelector('.plus');
-        const cantidadElement = document.getElementById('cantidad');
-        const totalInputElement = document.getElementById('totalValue');
-
-        // Precio unitario (puedes cambiarlo según tu necesidad)
-        const precioUnitario = 799.00;
-
-        // Función para actualizar el total
-        function actualizarTotal() {
-            const cantidad = parseInt(cantidadElement.textContent);
-            const total = cantidad * precioUnitario;
-            totalInputElement.value = total.toFixed(2); // Redondear a 2 decimales
-        }
-
-        // Event listener para el botón de disminuir cantidad
-        menosButton.addEventListener('click', function () {
-            let cantidad = parseInt(cantidadElement.textContent);
-            if (cantidad > 1) {
-                cantidad--;
-                cantidadElement.textContent = cantidad;
-                actualizarTotal();
-            }
-        });
-
-        // Event listener para el botón de aumentar cantidad
-        plusButton.addEventListener('click', function () {
-            let cantidad = parseInt(cantidadElement.textContent);
-            cantidad++;
-            cantidadElement.textContent = cantidad;
-            actualizarTotal();
-        });
-
-        // Calcular total inicial
-        actualizarTotal();
-    </script>
     <script src="js/script.js"></script>
     <script src="js/carrito.js"></script>
 </body>
-<script src="js/script.js"></script>
-
 </html>
