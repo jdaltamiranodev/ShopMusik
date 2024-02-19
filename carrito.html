@@ -37,45 +37,62 @@
     </nav>
 
     <div class="caja_grande">
-
         <div class="pajena_carrito">
-             <div class="product_imagen">
+            <div class="product_imagen">
               
                 <img src="img/guitara.jpg" alt="imagen" id="foto">
               
-              </div>
+            </div>
             <div class="caja_carrito">
                 <div class="precio">
-                 <h2>guitarra YAMAHA</h2>
-      
-                  <h1>779,00€</h1>
-                  <p class="iva">IVA INCLUIDO</p>
+                    <h2>guitarra YAMAHA</h2>
+        
+                    <h1>779,00€</h1>
+                    <p class="iva">IVA INCLUIDO</p>
                 </div>
-      
+                
+        
                 <div class="icons_cart">
-                  <!-- Icono de carrito -->
-                  <i class="bi bi-cart4"></i>
-                  <!-- Botón para disminuir cantidad -->
-                  <button class="menos"><i class="bi bi-dash-lg"></i></button>
-                  <!-- Cantidad actual -->
-                  <span id="cantidad">1</span>
-                  <!-- Botón para aumentar cantidad -->
-                  <button class="plus"><i class="bi bi-plus"></i></button>
-              </div>
-          
-              <button class="compra_ahora">compra ahora <i class="bi bi-arrow-right"></i> </button>
-          
-              <div class="total">
-                  <h1>Total:</h1>
-                  <!-- Campo de texto para mostrar el total -->
-                  <input type="text" id="totalValue">
-              </div>        
-               </div>
-           </div>
-            
+                    <!-- Icono de carrito -->
+                    <i class="bi bi-cart4"></i>
+                    <!-- Botón para disminuir cantidad -->
+                    <button class="menos"><i class="bi bi-dash-lg"></i></button>
+                    <!-- Cantidad actual -->
+                    <span id="cantidad">1</span>
+                    <!-- Botón para aumentar cantidad -->
+                    <button class="plus"><i class="bi bi-plus"></i></button>
+                </div>
+                
+                <div class="total">
+                    <h1>Total:</h1>
+                    <!-- Campo de texto para mostrar el total -->
+                    <input type="text" id="totalValue">
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div id="contenedor-carrito" class="contenedor-carrito ">
 
-   
+    </div> --> <!-- .contenedor-carrito -->
+        <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío <i class="bi bi-emoji-frown"></i></p>
+        <div id="carrito-productos" class="carrito-productos disabled">
+        <div class="contenedor-carrito-izquierda">
+            <button id="carrito-vaciar" class="carrito-vaciar">Vaciar carrito</button>
+        </div>
 
+        <div class="contenedor-carrito-derecha">
+            <div class="carrito-acciones-total">
+                <p id="producto-carrito-total" class="producto-carrito-total">Total:</p>
+                <p id="producto-carrito-total-precio" class="producto-carrito-total-precio">$3000</p>
+            </div>
+            <!-- <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button> -->
+            <button id="compra_ahora" class="compra_ahora">compra ahora <i class="bi bi-arrow-right"></i> </button>     
+        </div>
+    
+    <p id="producto-carrito-comprado" class="producto-carrito-comprado disabled">Muchas gracias por tu compra <i class="bi bi-emoji-laughing"></i></p>
+
+           
 
     <!--a partir de aqui el footer-->
     <div class="footer">
