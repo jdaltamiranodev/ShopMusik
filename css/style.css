@@ -29,19 +29,8 @@ body {
 /*estilos para boton hamburguesa*/
 .bars_menu{display: none;}
 .responsive{display: none;}
-
-
-
-
-
-
-
-.navegacion-principal li {
-  text-align: none;
-}
-a {
-    text-decoration: none;
-}
+.navegacion-principal li {text-align: none;}
+a {text-decoration: none;}
 
 h1, h2, h3, h4 {
     font-family: Helvetica, sans-serif;
@@ -1032,9 +1021,10 @@ background-color:var(--colorBlanco);
   color: var(--colorPrimario);
 }
 
-.responsive li a:hover,.responsive li a.active {
+.responsive li a:hover, 
+.responsive li a.active {
     color: var(--colorBlanco);
-}
+ }
 }
 
 
