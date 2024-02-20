@@ -1013,13 +1013,7 @@ background-color:var(--colorBlanco);
     }
   }
 
-    
-
-
-  
-
-
-/*aqui el responsive del header*/
+  /*aqui el responsive del header*/
 @media (max-width: 428px){
 .navegacion-principal{
     width: 100%;
