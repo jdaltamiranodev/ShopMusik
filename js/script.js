@@ -1,4 +1,28 @@
 
+//script boton hamburguesa
+document.querySelector(".bars_menu").addEventListener("click", animateBars);
+
+let line1_bars = document.querySelector(".line1_bars-menu");
+let line2_bars = document.querySelector(".line2_bars-menu");
+let line3_bars = document.querySelector(".line3_bars-menu");
+
+function animateBars(){
+    line1_bars.classList.toggle("activeline1_bars-menu");
+    line2_bars.classList.toggle("activeline2_bars-menu");
+    line3_bars.classList.toggle("activeline3_bars-menu");
+}
+
+//script nav dentro del boton hamburguesa
+document.querySelector(".bars_menu").addEventListener("click", animateMenu);
+
+let ulElement = document.querySelector(".responsive");
+
+function animateMenu () {
+    ulElement.classList.toggle("show-menu");
+
+}
+
+
 
 //script para la fecha
  const $fecha = document.querySelector('.fecha');
@@ -12,19 +36,22 @@ function digitalClock(){
     
     dia = ('0' + dia).slice(-2);
 
-    let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Sábado'];
+    let semana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves','V', 'Sábado'];
     let showSemana = (semana[diaSemana]);
 
     let mesAnio = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
     let showMes = (mesAnio[mes]);
 
-    document.querySelector('.fecha').innerHTML = `${showSemana} ${dia} de ${showMes} de ${anio}`
+    document.querySelector('.fecha').innerHTML = `${showSemana} ${dia} ${showMes} ${anio}`
 } 
 
 setInterval(() => {
     digitalClock()
 
 }, 1000);
+
+
+
 
 const productos = [
     
@@ -143,7 +170,7 @@ const productos = [
     {
         id: "viento-5",
         titulo: "viento-5",
-        imagen: "img/viento/05.jpg",
+        imagen: "img/viento/05.jpeg",
         descripcion: "",
         categoria: {
             nombre: "viento-5",
@@ -199,7 +226,7 @@ const productos = [
     {
         id: "percusion-4",
         titulo: "percusion-4",
-        imagen: "img/percusion/04.jpg",
+        imagen: "img/percusion/04.jpeg",
         descripcion: "",
         categoria: {
             nombre: "percusion-4",

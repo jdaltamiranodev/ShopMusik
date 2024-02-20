@@ -113,7 +113,7 @@ loginForm.addEventListener('submit', (e) =>{
      } else {
 
       alert(`Bienvenido ${validUser.name}`);
-      window.location.href = 'index2.html'
+      window.location.href = '../index.html'
      }
   
 });
