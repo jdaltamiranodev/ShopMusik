@@ -11,7 +11,7 @@ const precioUnitario = 799.00;
 function actualizarTotal() {
     const cantidad = parseInt(cantidadElement.textContent);
     const total = cantidad * precioUnitario;
-    totalInputElement.value = total.toFixed(2); // Redondear a 2 decimales
+    totalInputElement.value = `${total.toFixed(2)} €`; // Redondear a 2 decimales
 }
 
 // Event listener para el botón de disminuir cantidad
@@ -37,3 +37,5 @@ actualizarTotal();
 
 
 /* Carrito De Compras */
+let productosEnCarrito = localStorage.getItem("productos-en-carrito");
+productosEnCarrito = JSON.parse(productosEnCarrito);
