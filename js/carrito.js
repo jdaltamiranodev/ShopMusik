@@ -34,3 +34,6 @@ plusButton.addEventListener('click', function () {
 
 // Calcular total inicial
 actualizarTotal();
+
+
+/* Carrito De Compras */
