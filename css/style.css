@@ -23,14 +23,15 @@ body {
 }
 
 
+/* Globales */
+/* .contenedor-principal {
+    max-width: 120rem;
+    width: 90%; 
+} */
 
-
-
-/*estilos para boton hamburguesa*/
-.bars_menu{display: none;}
-.responsive{display: none;}
-.navegacion-principal li {text-align: none;}
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+}
 
 h1, h2, h3, h4 {
     font-family: Helvetica, sans-serif;
@@ -53,17 +54,9 @@ h4 {
     font-size: 2.8rem;
 }
 
-img { width: 100%;
-      height: 100%;
-      max-width: 100%;
+img {
+    max-width: 100%;
 }
-
-
-
-/* Header */
-
-
-
 
  .fecha-texto {
     color: var(--colorBlanco);
@@ -82,7 +75,7 @@ img { width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 5px 90px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0px 5px 90px rgba(0, 0, 0, 0.3); */
    
 }
 
@@ -90,7 +83,7 @@ img { width: 100%;
     max-width: 100%;
     max-height: 100%;
     margin:0 5rem 0 5rem;
-    
+    /* border: .5rem solid purple; */
 }
 
 .logo-imagen {
@@ -109,8 +102,6 @@ img { width: 100%;
     color: var(--colorBlanco);
     font-size: 2.5rem;
 }
-
-
 
 .iconos-cont {
     margin: 0 5rem auto auto;
@@ -135,7 +126,8 @@ img { width: 100%;
 /* Banner Guitarra */
 
 .contenedor-banner {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
+    /* box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3); */
 }
 
 .banner-guitarra {
@@ -275,7 +267,10 @@ img { width: 100%;
 
 .carrito-vacio,
 .carrito-comprado {
-  color: var(--clr-main);
+  margin-top: 2rem;
+  color: var(--colorNegro);
+  text-align: center;
+  font-size: 3rem;
   /* display: none; */
 }
 
@@ -306,51 +301,78 @@ img { width: 100%;
 }
 
 .carrito-producto-eliminar {
-  border: 0;
+  border: none;
   background-color: transparent;
-  color: var(--clr-red);
+  color: var(--colorNegro);
   cursor: pointer;
+}
+
+.carrito-producto-eliminar:hover {
+  background-color: var(--colorSecundario);
 }
 
 .carrito-acciones {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-bottom: 3rem;
 }
 
 .carrito-acciones-vaciar {
   border: 0;
-  background-color: var(--clr-gray);
+  background-color: var(--colorGris);
+  border: .5rem solid var(--colorGris);
   padding: 1rem;
-  border-radius: 1rem;
-  color: var(--clr-main);
+  border-radius: .5rem;
+  color: var(--colorBlanco);
+  font-weight: 900;
   text-transform: uppercase;
   cursor: pointer;
 }
 
+.carrito-acciones-vaciar:hover {
+  background-color: var(--colorBlanco);
+  color: var(--colorGris);
+  font-weight: 900;
+}
+
 .carrito-acciones-derecha {
+  width: 22%;
   display: flex;
+  justify-content: space-around;
+  /* border: .5rem solid green; */
 }
 
 .carrito-acciones-total {
   display: flex;
-  background-color: var(--clr-gray);
+  background-color: var(--colorGrisClaro);
   padding: 1rem;
-  color: var(--clr-main);
+  color: var(--colorBlanco);
   text-transform: uppercase;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  font-weight: 900;
+  border-radius: .5rem;
+  /* border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem; */
   gap: 1rem;
 }
 
 .carrito-acciones-comprar {
-  border: 0;
-  background-color: var(--clr-main);
+  background-color: var(--colorPrimario);
   padding: 1rem;
-  color: var(--clr-white);
+  color: var(--colorBlanco);
+  font-weight: 900;
+  border: .5rem solid var(--colorPrimario);
   text-transform: uppercase;
   cursor: pointer;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-radius: .5rem;
+  /* border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem; */
+}
+
+.carrito-acciones-comprar:hover {
+  color: var(--colorPrimario);
+  /* font-weight: 900; */
+  background-color: var(--colorBlanco);
+  
 }
 
 .disabled {
@@ -768,7 +790,9 @@ height: 30rem;
 margin-top: 5rem; 
 
 }
-
+img{ width: 100%;
+height: 100%;
+}
 #foto {
 position: relative;
 animation: mover 2s infinite; /* La animación "mover" durará 2 segundos y se repetirá infinitamente */
@@ -823,10 +847,22 @@ background-color: red;}*/
 margin-top: -1rem;}
 
 .total{display: flex;
+  align-items: center;
 margin-top: 5rem;}
-.total div {margin-top: 2rem;}
+.total h3 {
+  margin-right: 2rem;
+}
+.total input {
+  border: none;
+  width: 15rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  border-radius: .5rem;
+}
+/* .total div {margin-top: 2rem;} */
 
-#totalValue{ border: 1px solid red;
+#totalValue{ border: .5rem solid var(--colorPrimario);
 height: 5rem;
 margin-top: 3rem;}
 
@@ -849,8 +885,7 @@ order: -1; /* Coloca la imagen arriba en dispositivos móviles */
 /* border-bottom:; /* Espacio entre la imagen y el contenido */
 background-color: var(--colorSecundario);
 height: 35rem;}
-
-.contenedor-producto-imagen img{ width: 50%;
+img{ width: 50%;
 height: 50%;
 margin: 3rem;
 background-color:var(--colorBlanco);
@@ -937,195 +972,6 @@ background-color:var(--colorBlanco);
 
 
   /*RESPONSIVE*/
-
-  @media (max-width: 810px){
-    .navegacion-lista{display: none;}
-    .bars_menu{
-      width: 6rem;
-      height: 5rem;
-      transform: translate(-50%, -50%);
-      cursor: pointer;
-      display: block;
-      margin-left: 6rem;
-      margin-top: 6rem;
-    }
-  
-    .bars_menu span {
-      display: block;
-      width: 100%;
-      height: 4px;
-      background-color: var(--colorPrimario);
-      margin-top: 6px; 
-      transform-origin: 0px 100%;
-      transition: all 600ms;
-    } 
-  .activeline1_bars-menu{
-      transform: rotate(45deg) translate(-2px, 1px);
-    }
-    
-  .activeline2_bars-menu{
-      opacity: 0;
-      margin-left: -5px;
-    }
-    
-  .activeline3_bars-menu{
-      transform: rotate(-45deg) translate(-4px, 2px);
-    }
-
-  .responsive{
-      display: block;
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background-color: var(--colorNegro);
-      top: 7.4rem;
-      left: -110%;
-      text-align:left;
-      transition: all .55s;
-    }
-    
-  .responsive.show-menu {
-      left: 0;
-    }
-    
-    
-  .responsive li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-  .responsive li a{
-      color: var(--colorPrimario);
-    }
-    
-  .responsive li a:hover,.responsive li a.active {
-        color: var(--colorBlanco);
-    }
-  }
-
-    
-
-
-  
-
-
-/*aqui el responsive del header*/
-@media (max-width: 428px){
-.navegacion-principal{
-    width: 100%;
-    height:9rem;
-  }
-  
-  /*aqui estilo boton hamburguesa*/
-.bars_menu{
-    width: 7rem;
-    height: 5rem;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    display: block;
-    margin-left: 3rem;
-    margin-top: 6rem;
-  }
-
-  .bars_menu span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--colorPrimario);
-    margin-top: 6px; 
-    transform-origin: 0px 100%;
-    transition: all 600ms;
-  } .activeline1_bars-menu{
-    transform: rotate(45deg) translate(-2px, 1px);
-  }
-  
-  .activeline2_bars-menu{
-    opacity: 0;
-    margin-left: -5px;
-  }
-  
-  .activeline3_bars-menu{
-    transform: rotate(-45deg) translate(-4px, 2px);
-  }
-/*hasta aqui es hamburguesa*/
-
-
-  
-.contenedor-iconos-fecha{
-  margin-top: 2rem;
-    display: block;
-    width: 30%;   
-    height: 100%;
-  }
-.fecha-texto{
-    width: 90%;
-  }
-
-.fecha{
-    font-size: 1rem;
-  }
-.iconos-cont{
-    display: flex;
-    gap: 2rem;
-    justify-content: unset;
-  }
-.iconos{
-   font-size: 2rem;
-   margin: 0 0;
-   padding: 0 0;
-   }
-.navegacion-lista{ display: none;}
-.navegacion-listaham {
- margin-top: -0rem;
-  width: 100%;
-  background-color: #000000;
-  position: absolute;
-  display: flex;
-}
-.navegacion-listaham a {
-  font-size: 2rem;
-   color: white;
- }
-
-
- /*aqui lo que los li del boton hamburguesa */
- .responsive{
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--colorNegro);
-  top: 7.4rem;
-  left: -110%;
-  text-align:left;
-  transition: all .55s;
-}
-
-.responsive.show-menu {
-  left: 0;
-}
-
-
-.responsive li{
-  display: block;
-  margin: 50px 0;
-  line-height: 30px;
-}
-.responsive li a{
-  color: var(--colorPrimario);
-}
-
-.responsive li a:hover, 
-.responsive li a.active {
-    color: var(--colorBlanco);
- }
-}
-
-
-
-/*hasta responsive del header*/
-
-
   @media only screen and (min-width: 1280px) {
     .contain {
        
@@ -1196,5 +1042,3 @@ background-color:var(--colorBlanco);
       transform: translateY(0px);
     }
   }
-
-
