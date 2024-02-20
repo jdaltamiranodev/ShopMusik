@@ -5,7 +5,7 @@ const photoContainer = document.getElementById('photoContainer');
 
 
   const secondPhoto = document.createElement('img');
-  secondPhoto.src = 'img/ibanez2.webp';
+  secondPhoto.src = 'img/ibanez2.jpg';
   secondPhoto.className = 'photo';
   secondPhoto.style.display = 'none'; 
   secondPhoto.style.width = '49rem';
@@ -34,5 +34,7 @@ const photoContainer = document.getElementById('photoContainer');
  
 
 
-  
+  // SlidePhotos //
+
+ 
  

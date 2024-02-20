@@ -134,12 +134,12 @@ img { width: 100%;
 
 /* Banner Guitarra */
 
-.contenedor-banner {
+.slides {
     margin-top: 5rem;
 }
 
-.banner-guitarra {
-  max-height: 80rem;
+.mySlides{
+  max-height: 70rem;
 }
 
 /* Productos */
@@ -644,10 +644,6 @@ img { width: 100%;
     place-items: center;
    
 }
-.grid div {
-    border: 0.2rem solid   #9A9A9A;
-}
-
 
 .marca {
     display: flex;
@@ -857,6 +853,20 @@ background-color:var(--colorBlanco);
 }
 }
 /* Página Carrito - Kelthoum - FIN */
+
+
+
+
+
+
+/* Slide-Photos inicio */
+
+
+
+
+/* Slide-Photo final */
+
+
   
 
 /* Footer */
