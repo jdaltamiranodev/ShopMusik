@@ -1021,10 +1021,10 @@ background-color:var(--colorBlanco);
   color: var(--colorPrimario);
 }
 
-.responsive li a:hover, 
-.responsive li a.active {
+.responsive li a:hover, .responsive li a.active {
     color: var(--colorBlanco);
  }
+
 }
 
 
