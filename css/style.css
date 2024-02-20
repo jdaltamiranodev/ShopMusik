@@ -133,6 +133,14 @@ img {
   max-height: 70rem;
 }
 
+@media (min-width: 768px){
+  .mySlides {
+    height: 60rem;
+  }
+  .slides {
+     margin-top: 1rem;
+  }
+}
 /* Productos */
 
 .titulo-categorias {
@@ -594,7 +602,8 @@ span {
 }
 
 #mainPhoto {
-    margin: 0;
+    margin: 
+    0;
     width: 49rem; 
     height: auto; 
     transition: width 0.3s ease; 
