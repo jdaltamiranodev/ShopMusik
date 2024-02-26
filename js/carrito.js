@@ -65,7 +65,7 @@ function cargarProductosCarrito(){
     
         productosEnCarrito.forEach(producto => {
             const div = document.createElement("div");
-            div.classList.add("pajena_carrito");
+            div.classList.add("contenedor-carrito-producto");
             div.innerHTML = `
 
             <div class="product_imagen">
@@ -80,13 +80,13 @@ function cargarProductosCarrito(){
                 <div class="icons_cart">
                     <i class="bi bi-cart4"></i>
                     <button class="menos"><i class="bi bi-dash-lg"></i></button>
-                    <span id="cantidad">1</span>
+                    <span id="cantidad">${producto.cantidad}</span>
                     <button class="plus"><i class="bi bi-plus"></i></button>
                     <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
                 </div>
                 <div class="total">
                     <p>Subtotal:</p>
-                    <p>0 €</p>
+                    <p>${producto.precio * producto.cantidad} €</p>
                 </div> 
                 
             </div>
@@ -173,6 +173,7 @@ function comprarCarrito(){
     contenedorCarritoProductos.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
     contenedorCarritoComprado.classList.remove("disabled");
+    console.log(contenedorCarritoProductos)
 }
 
 /* CÓDIGO DEL ECOMMERCE DE ROPA - FIN*/
