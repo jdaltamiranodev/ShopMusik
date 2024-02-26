@@ -842,6 +842,10 @@ justify-content: center;
 gap: 5rem;
 }
 
+.contenedor-carrito-producto {
+  display: flex;
+}
+
 .caja_carrito{ width: 30rem;
 height: rem;
 background-color:var(--colorSecundario);
