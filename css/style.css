@@ -843,7 +843,10 @@ gap: 5rem;
 }
 
 .contenedor-carrito-producto {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
 }
 
 .caja_carrito{ width: 30rem;
