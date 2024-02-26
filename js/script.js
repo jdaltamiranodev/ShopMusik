@@ -321,16 +321,16 @@ function cargarProductos(productosElegidos) {
             <div class="producto-detalles">
                 <p class="titulo-producto">${producto.titulo}</p>
                 <p class="producto-precio">${producto.precio},00 €</p>
-                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                    <div class="contenedor-cantidad"><p id="cambiar-cantidad" class="cambiar-cantidad">0</p></div>
-                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                </div>
+    
                 <button class="agregar-producto-carrito" id="${producto.id}">Añadir al carrito <i class="bi bi-cart3"></i></button>
             </div>
         `
-        /* Lo quite porque voy a usar una etiqueta p en vez de un input para mostrar cantidad de producto */
-        /* <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9"> */
+        
+        {/* <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
+                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
+                    <div class="contenedor-cantidad"><p id="cambiar-cantidad" class="cambiar-cantidad">0</p></div>
+                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
+                </div> */}
         contenedorProductos.append(div);
     })
 
