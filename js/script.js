@@ -437,3 +437,18 @@ function agregarAlCarrito(e) {
     
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 } */
+/*java de lista de categorias*/
+var categoriaBtn = document.getElementById('categorias-btn');
+var categoriaLista = document.getElementById('categorias-lista');
+
+categoriaBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    categoriaLista.style.display = (categoriaLista.style.display === 'block') ? 'none' : 'block';
+});
+
+// Oculta la lista cuando se haga clic fuera de ella
+document.addEventListener('click', function(event) {
+    if (!categoriaLista.contains(event.target) && event.target !== categoriaBtn) {
+        categoriaLista.style.display = 'none';
+    }
+});
