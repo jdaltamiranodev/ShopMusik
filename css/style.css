@@ -136,7 +136,7 @@ img {
 /* Banner Guitarra slide-show*/
 
 .slides {
-    margin-top: 5rem;
+    
     height: 45rem;
     
 }
@@ -152,7 +152,7 @@ img {
 
 @media (min-width: 1280px){
   .slides {
-    margin-top: 5rem;
+    
     height: 80rem;
     width: 100%;
    
