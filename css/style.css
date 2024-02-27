@@ -22,6 +22,56 @@ body {
     line-height: 2;
 }
 
+/*css checkout*/
+/* .body-checkout{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 5rem;
+
+} */
+.checkout-container {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.titulo-dos-checkout{
+  text-align: center;
+}
+
+.receiver-info,
+.shipping-address {
+  margin-bottom: 20px;
+}
+
+.receiver-info input,
+.shipping-address input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn{
+  width: 100%;
+  padding: 10px;
+  background-color: #eb3333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #e90707;
+}
 
 /* Globales */
 /* .contenedor-principal {
@@ -64,6 +114,37 @@ h4 {
 
 img {
     max-width: 100%;
+}
+/*kk*/
+.contenedor-banner {
+  position: relative;
+  
+}
+
+.titulo-superior,
+.titulo-central,
+.titulo-inferior {
+  position: absolute;
+  right:50%;
+  transform: translateX(-50%);
+  text-align:center;
+  
+  background-color: rgba(255, 255, 255, 0.7); /* Color de fondo */
+  padding: 10px; /* Espaciado interno */
+  
+}
+
+.titulo-superior {
+  top: 10px; /* Distancia desde la parte superior */
+}
+
+.titulo-central {
+  top: 50%; /* Centrado vertical */
+  transform: translate(-50%, -50%);
+}
+
+.titulo-inferior {
+  bottom: 10px; /* Distancia desde la parte inferior */
 }
 
  .fecha-texto {
@@ -131,6 +212,30 @@ img {
 .bi i {
     height: 20rem;
     width: 20rem;
+}
+/* parti de css con categoria*/
+#categoria-lista {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* Cambia el color de fondo según tus preferencias */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+  padding: 8px 0;
+  z-index: 1;
+}
+
+#categorias-lista li {
+  list-style: none;
+}
+
+#categorias-lista li a {
+  display: block;
+  padding: 8px 16px;
+  color: #333; /* Color del texto */
+  text-decoration: none;
+}
+
+#categorias-lista li a:hover {
+  background-color: #f0f0f0; /* Cambia el color de fondo al pasar el cursor */
 }
 
 /* Boton cantidad en el icono carrito */
