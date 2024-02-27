@@ -22,6 +22,56 @@ body {
     line-height: 2;
 }
 
+/*css checkout*/
+.body-checkout{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 5rem;
+
+}
+.checkout-container {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.titulo-dos-checkout{
+  text-align: center;
+}
+
+.receiver-info,
+.shipping-address {
+  margin-bottom: 20px;
+}
+
+.receiver-info input,
+.shipping-address input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn{
+  width: 100%;
+  padding: 10px;
+  background-color: #eb3333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #e90707;
+}
 
 
 
