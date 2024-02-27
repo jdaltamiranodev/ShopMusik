@@ -79,7 +79,7 @@ img {
     background-size: cover;
     background-position: center;
    
-/*     background-color: var(--colorNegro); */
+    background-color: var(--colorNegro);
     display: flex;
     align-items: center;
     justify-content: space-between;
