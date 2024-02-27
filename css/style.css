@@ -57,6 +57,37 @@ img { width: 100%;
       height: 100%;
       max-width: 100%;
 }
+/*kk*/
+.contenedor-banner {
+  position: relative;
+  
+}
+
+.titulo-superior,
+.titulo-central,
+.titulo-inferior {
+  position: absolute;
+  right:50%;
+  transform: translateX(-50%);
+  text-align:center;
+  
+  background-color: rgba(255, 255, 255, 0.7); /* Color de fondo */
+  padding: 10px; /* Espaciado interno */
+  
+}
+
+.titulo-superior {
+  top: 10px; /* Distancia desde la parte superior */
+}
+
+.titulo-central {
+  top: 50%; /* Centrado vertical */
+  transform: translate(-50%, -50%);
+}
+
+.titulo-inferior {
+  bottom: 10px; /* Distancia desde la parte inferior */
+}
 
 
 

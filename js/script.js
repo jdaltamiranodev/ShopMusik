@@ -56,6 +56,7 @@ setInterval(() => {
 const productos = [
     
     // Instrumentos de cuerda
+    
     {
         id: "cuerda-1",
         titulo: "cuerda-1",
@@ -123,6 +124,7 @@ const productos = [
         precio: 1000
     },
     // Instrumentos de viento
+   
     {
         id: "viento-1",
         titulo: "viento-1",
@@ -189,7 +191,10 @@ const productos = [
         },
         precio: 1000
     },
+      
+      
     // Instrumentos de percusión
+  
     {
         id: "percusion-1",
         titulo: "percusion-1",
@@ -260,6 +265,7 @@ const productos = [
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 
+
 const tituloProducto = document.querySelector("#titulo-producto");
 
 let botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
@@ -307,6 +313,8 @@ function cargarProductos(productosElegidos) {
 
         const div = document.createElement("div");
         div.classList.add("contenedor-producto");
+
+       
 
         div.innerHTML = `
             <img class="contenedor-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
