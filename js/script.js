@@ -321,9 +321,6 @@ function cargarProductos(productosElegidos) {
 
         const div = document.createElement("div");
         div.classList.add("contenedor-producto");
-
-       
-
         div.innerHTML = `
             <img class="contenedor-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="producto-detalles">
@@ -334,11 +331,6 @@ function cargarProductos(productosElegidos) {
             </div>
         `
         
-        {/* <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                    <div class="contenedor-cantidad"><p id="cambiar-cantidad" class="cambiar-cantidad">0</p></div>
-                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                </div> */}
         contenedorProductos.append(div);
     })
 
