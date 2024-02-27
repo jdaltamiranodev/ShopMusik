@@ -10,29 +10,44 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>            
-        <nav class="navegacion-principal">
-            <div id="contenedor-logo" class="contenedor-logo">
-                <a href="index.html"><img class="logo-imagen" src="img/logo-musik.webp" alt="logo ShopMusik"></a>
-            </div>
-            <ul class="navegacion-lista">
-                <a class="navegacion-lista-enlace" href="categorias.html">Categorias</a>
-                <a class="navegacion-lista-enlace" href="accesorios.html">Accesorios</a>
-                <!-- <a class="navegacion-lista-enlace" href="">Amplificadores</a> -->
-            </ul>
-            <!-- Aquí la Fecha Jhony -->
-            <div class="contenedor-iconos-fecha">
-               
-                <div class="fecha-texto">
-                    <p class="fecha"></p>
-                </div>
+    <nav class="navegacion-principal active">
+        <div class="bars_menu">
+            <span class="line1_bars-menu"></span>
+            <span class="line2_bars-menu"></span>
+            <span class="line3_bars-menu"></span>
+        </div>
 
-                <div class="iconos-cont">
-                    <a class="iconos" href=""><i class="bi bi-globe"></i></a>
-                    <a class="iconos" href=""><i class="bi bi-person"></i></a>
-                    <a class="iconos" href="carrito.html"><i class="bi bi-bag"></i></a>
-                </div>
+        <ul class="responsive">
+            <li><a href="categorias.html">Categoria</a></li>
+            <li><a href="accesorios.html">Accesorio</a></li>
+            <li><a href="amplificadores.html">Amplificadores</a></li>
+            
+        </ul>
+        
+        <div class="contenedor-logo">
+            <a href="index.html"><img class="logo-imagen" src="img/logo-musik.webp" alt="logo ShopMusik"></a>
+        </div>
+
+        
+        <ul class="navegacion-lista">
+           <li><a class="navegacion-lista-enlace" href="categorias.html">Categorias</a></li>
+           <li><a class="navegacion-lista-enlace" href="accesorios.html">Accesorios</a></li>
+         
+        </ul>
+        
+        <div class="contenedor-iconos-fecha">
+           
+            <div class="fecha-texto">
+                <p class="fecha"></p>
             </div>
-        </nav>
+
+            <div class="iconos-cont">
+                <a class="iconos" href=""><i class="bi bi-globe"></i></a>
+                <a class="iconos" href="form/form.html"><i class="bi bi-person"></i></a>
+                <a class="iconos" href="/carrito.html"><i class="bi bi-cart3"></i></a>
+            </div>
+        </div>
+    </nav>
 
         <div class="contenedor-banner">
             <img class="banner-guitarra" src="img/banner-guitarra-cat.png" alt="imagen guitarra">
@@ -51,11 +66,6 @@
                                 <img id="contenedor-producto-imagen" class="contenedor-producto-imagen" src="img/amplificador1.jpg" alt="imagen guitarra">
                                 <p id="titulo-producto" class="titulo-producto">Título del producto</p>
                                 <p class="producto-precio">$1000,00 €</p>
-                                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
-                                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                                </div>
                                 <button id="agregar-producto-carrito" class="agregar-producto-carrito">Añadir al carrito <i class="bi bi-cart3"></i></button>
                             </div> <!-- .contenedor-producto -->
             
@@ -63,11 +73,6 @@
                                 <img id="contenedor-producto-imagen" class="contenedor-producto-imagen" src="img/amplificador2.jpg" alt="imagen guitarra">
                                 <p id="titulo-producto" class="titulo-producto">Título del producto</p>
                                 <p class="producto-precio">$1000,00 €</p>
-                                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
-                                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                                </div>
                                 <button id="agregar-producto-carrito" class="agregar-producto-carrito">Añadir al carrito <i class="bi bi-cart3"></i></button>
                             </div> <!-- .contenedor-producto -->
             
@@ -75,11 +80,6 @@
                                 <img id="contenedor-producto-imagen" class="contenedor-producto-imagen" src="img/amplificador33.jpg" alt="imagen guitarra">
                                 <p id="titulo-producto" class="titulo-producto">Título del producto</p>
                                 <p class="producto-precio">$1000,00 €</p>
-                                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
-                                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                                </div>
                                 <button id="agregar-producto-carrito" class="agregar-producto-carrito"> Añadir al carrito <i class="bi bi-cart3"></i></button>
                             </div> <!-- .contenedor-producto -->
             
@@ -87,11 +87,6 @@
                                 <img id="contenedor-producto-imagen" class="contenedor-producto-imagen" src="img/implificador7.jpg" alt="imagen guitarra">
                                 <p id="titulo-producto" class="titulo-producto">Título del producto</p>
                                 <p class="producto-precio">$1000,00 €</p>
-                                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
-                                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                                </div>
                                 <button id="agregar-producto-carrito" class="agregar-producto-carrito"> Añadir al carrito <i class="bi bi-cart3"></i></button>
                             </div> <!-- .contenedor-producto -->
             
@@ -99,11 +94,6 @@
                                 <img id="contenedor-producto-imagen" class="contenedor-producto-imagen" src="img/implificador8.jpg" alt="imagen guitarra">
                                 <p id="titulo-producto" class="titulo-producto">Título del producto</p>
                                 <p class="producto-precio">$1000,00 €</p>
-                                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
-                                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                                </div>
                                 <button id="agregar-producto-carrito" class="agregar-producto-carrito"> Añadir al carrito <i class="bi bi-cart3"></i></button>
                             </div> <!-- .contenedor-producto -->
             
@@ -111,11 +101,6 @@
                                 <img id="contenedor-producto-imagen" class="contenedor-producto-imagen" src="img/inplificador6.jpg" alt="imagen guitarra">
                                 <p id="titulo-producto" class="titulo-producto">Título del producto</p>
                                 <p class="producto-precio">$1000,00 €</p>
-                                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
-                                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                                </div>
                                 <button id="agregar-producto-carrito" class="agregar-producto-carrito"> Añadir al carrito <i class="bi bi-cart3"></i></button>
                             </div> <!-- .contenedor-producto -->
             

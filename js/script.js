@@ -263,6 +263,8 @@ const productos = [
     }
 ];
 
+/* Mostrar productos en Página Caterorías */
+
 const contenedorProductos = document.querySelector("#contenedor-productos");
 
 
@@ -270,11 +272,15 @@ const tituloProducto = document.querySelector("#titulo-producto");
 
 let botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
 
+const cantidadProducto = document.querySelector("#cambiar-cantidad");
+
 function cargarProductos(productosElegidos) {
 
     contenedorProductos.innerHTML = "";
     
     productosElegidos.forEach(producto => {
+
+        /* ESTA FORMA FUE LA QUE SUGIRIO ANDRES (FORMADOR) INICIO */
 
         /* let contenedorProducto = document.createElement("div");
         contenedorProducto.classList.add("contenedor-producto");
@@ -309,6 +315,8 @@ function cargarProductos(productosElegidos) {
 
         contenedorProductos.appendChild(contenedorProducto); */
 
+        /* ESTA FORMA FUE LA QUE SUGIRIO ANDRES (FORMADOR) FIN */
+
         
 
         const div = document.createElement("div");
@@ -321,15 +329,16 @@ function cargarProductos(productosElegidos) {
             <div class="producto-detalles">
                 <p class="titulo-producto">${producto.titulo}</p>
                 <p class="producto-precio">${producto.precio},00 €</p>
-                <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
-                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
-                    <input id="cambiar-cantidad" class="cambiar-cantidad" type="text" value="1" min="0" max="9">
-                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
-                </div>
+    
                 <button class="agregar-producto-carrito" id="${producto.id}">Añadir al carrito <i class="bi bi-cart3"></i></button>
             </div>
         `
         
+        {/* <div id="contenedor-cambiar-cantidad" class="contenedor-cambiar-cantidad">
+                    <button class="boton-menos"><i class="bi bi-dash"></i></button>
+                    <div class="contenedor-cantidad"><p id="cambiar-cantidad" class="cambiar-cantidad">0</p></div>
+                    <button class="boton-mas"><i class="bi bi-plus"></i></button>
+                </div> */}
         contenedorProductos.append(div);
     })
 
@@ -352,7 +361,7 @@ let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
 if(productosEnCarritoLS){
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
-    //actualizarNumerito();
+    actualizarCantidad();
 }else{
     productosEnCarrito = [];
 }
@@ -373,11 +382,22 @@ function agregarAlCarrito(e) {
     }
     console.log(productosEnCarrito)
 
-    //actualizarNumerito();
+    actualizarCantidad();
     
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
+
 console.log(productosEnCarrito)
+
+function actualizarCantidad(){
+    let aumentaCantidad = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    cantidadProducto.innerHTML = aumentaCantidad;
+}
+
+
+
+
+/* ESTA FORMA FUE LA QUE SUGIRIO ANDRES (FORMADOR) INICIO */
 
 /* function actualizarBotonesAgregar(){
     botonesAgregar = document.querySelectorAll(".agregar-producto-carrito");
@@ -445,18 +465,5 @@ function agregarAlCarrito(e) {
     
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 } */
-/*java de lista de categorias*/
-var categoriaBtn = document.getElementById('categorias-btn');
-var categoriaLista = document.getElementById('categorias-lista');
 
-categoriaBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    categoriaLista.style.display = (categoriaLista.style.display === 'block') ? 'none' : 'block';
-});
-
-// Oculta la lista cuando se haga clic fuera de ella
-document.addEventListener('click', function(event) {
-    if (!categoriaLista.contains(event.target) && event.target !== categoriaBtn) {
-        categoriaLista.style.display = 'none';
-    }
-});
+/* ESTA FORMA FUE LA QUE SUGIRIO ANDRES (FORMADOR) FINAL */
