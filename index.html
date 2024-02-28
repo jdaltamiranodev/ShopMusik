@@ -20,7 +20,10 @@
             </div>
 
             <ul class="responsive">
-                <li><a href="categorias.html">Categoria</a></li>
+                <li><a href="categorias.html">Categoria</a>
+                    
+                </li>
+
                 <li><a href="accesorios.html">Accesorio</a></li>
                 <li><a href="amplificadores.html">Amplificadores</a></li>
                 
@@ -103,51 +106,37 @@
                          
                     <a class="iconos" href="/carrito.html"><i class="bi bi-cart3"></i></a>
                 </div>
+                
             </div>
         </nav>
 
        
         <div class="slides">
-            <img class="mySlides" src="img/banner-guitarra-cat.png" alt="">
+            <img class="mySlides" src="img/banner-guitarra-cat.png">
             <img class="mySlides" src="img/1.avif">
+            <img class="mySlides" src="img/slide2.jpg">
             <img class="mySlides" src="img/2.avif">
             <img class="mySlides" src="img/3.avif">
-            <img class="mySlides" src="img/guitara.jpeg" >
             <img class="mySlides" src="img/4.avif">
+            <img class="mySlides" src="img/slide1.jpg">
             <img class="mySlides" src="img/5.avif">
             <img class="mySlides" src="img/6.avif">
-
         </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus iusto eligendi! Praesentium corrupti quisquam nam sint impedit, magnam numquam deleniti veritatis tempore, quod quisbusdam qui eveniet autem modi vero!</p>
-       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores itaque at eligendi vitae doloremque perferendis distinctio porro a eius tempore odit neque commodi illum odio fugiat harum, excepturi deleniti eveniet?</p>
-  <!-- soy Jonathan lo comento porque igual sobrecarga demasiado la vista
         <main class="contenedor-principal">
+        
             <div class="contenedor-categorias">
-                <h2>Categorías</h2>
+                <h2 id="titulo-categorias" class="titulo-categorias">Instrumentos Musicales</h2>
                 <div id="contenedor-productos" class="contenedor-productos">
-                    <div class="contenedor-producto">
-                        <img class="contenedor-producto-imagen" src="img/guitarra-2.jpg" alt="imagen guitarra">
-                        <p id="titulo-producto" class="titulo-producto">Título del producto</p>
-                        <p id="producto-precio" class="producto-precio">Precio</p>
-                    </div>
-    
-                    <div class="contenedor-producto">
-                        <img class="contenedor-producto-imagen" src="img/guitarra-2.jpg" alt="imagen guitarra">
-                        <p id="titulo-producto" class="titulo-producto">Título del producto</p>
-                        <p id="producto-precio" class="producto-precio">Precio</p>
-                    </div>
-    
-                    <div class="contenedor-producto">
-                        <img class="contenedor-producto-imagen" src="img/guitarra-2.jpg" alt="imagen guitarra">
-                        <p id="titulo-producto" class="titulo-producto">Título del producto</p>
-                        <p id="producto-precio" class="producto-precio">Precio</p>
-                    </div>
+            <div id="contenedor-producto" class="contenedor-producto">
+                <img id="contenedor-producto-imagen" class="contenedor-producto-imagen" src="img/guitarra-2.jpg" alt="imagen guitarra">
+                <p id="titulo-producto" class="titulo-producto">Título del producto</p> 
+                <button id="agregar-producto-carrito" class="agregar-producto-carrito">Añadir al carrito <i class="bi bi-cart3"></i></button>
             </div>
+                </div>
+            </div>
+            
         </main>
-
-       
- -->
 
 
      <!--a partir de aqui el footer-->   
@@ -207,5 +196,7 @@
 
 
 <script src="js/script.js"></script>
+<script src="js/idioma.js"></script>
+<script src="js/carrito.js"></script>
 <script src="js/slideauto.js"></script>
 </html>

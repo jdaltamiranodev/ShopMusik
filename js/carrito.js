@@ -1,45 +1,7 @@
-/* // Obtener elementos del DOM
-const menosButton = document.querySelector('.menos');
-const plusButton = document.querySelector('.plus');
-const cantidadElement = document.getElementById('cantidad');
-const totalInputElement = document.getElementById('totalValue');
-
-// Precio unitario (puedes cambiarlo según tu necesidad)
-const precioUnitario = 799.00;
-
-// Función para actualizar el total
-function actualizarTotal() {
-    const cantidad = parseInt(cantidadElement.textContent);
-    const total = cantidad * precioUnitario;
-    totalInputElement.value = `${total.toFixed(2)} €`; // Redondear a 2 decimales
-}
-
-// Event listener para el botón de disminuir cantidad
-menosButton.addEventListener('click', function () {
-    let cantidad = parseInt(cantidadElement.textContent);
-    if (cantidad > 1) {
-        cantidad--;
-        cantidadElement.textContent = cantidad;
-        actualizarTotal();
-    }
-});
-
-// Event listener para el botón de aumentar cantidad
-plusButton.addEventListener('click', function () {
-    let cantidad = parseInt(cantidadElement.textContent);
-    cantidad++;
-    cantidadElement.textContent = cantidad;
-    actualizarTotal();
-});
-
-// Calcular total inicial
-actualizarTotal(); */
-
-
 /* Carrito De Compras */
 let productosEnCarrito = localStorage.getItem("productos-en-carrito");
-//productosEnCarrito = JSON.parse(productosEnCarrito);
-productosEnCarrito = productosEnCarrito ? JSON.parse(productosEnCarrito) : [];
+productosEnCarrito = JSON.parse(productosEnCarrito);
+//productosEnCarrito = productosEnCarrito ? JSON.parse(productosEnCarrito) : [];
 
 
 /* CÓDIGO DEL ECOMMERCE DE ROPA - INICIO */
@@ -79,10 +41,8 @@ function cargarProductosCarrito(){
                 </div>
                 <div class="icons_cart">
                     <i class="bi bi-cart4"></i>
-                    <button class="menos"><i class="bi bi-dash-lg"></i></button>
                     <span id="cantidad">${producto.cantidad}</span>
-                    <button class="plus"><i class="bi bi-plus"></i></button>
-                    <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
+                    <button class="carrito-producto-eliminar" id="${producto.id}"> <i class="bi bi-trash-fill"></i></button>
                 </div>
                 <div class="total">
                     <p>Subtotal:</p>
@@ -92,30 +52,8 @@ function cargarProductosCarrito(){
             </div>
                 
             `
-
-            /* <img src="${producto.imagen}" alt="${producto.titulo}">
-                <div class="carrito-producto-titulo">
-                    <small>Tìtulo</small>
-                    <h3>${producto.titulo}</h3>
-                </div> 
-    
-                <div class="carrito-producto-cantidad">
-                    <small>Cantidad</small>
-                    <p>${producto.cantidad}</p>
-                </div> 
-    
-                <div class="carrito-producto-precio">
-                    <small>Precio</small>
-                    <p>${producto.precio}</p>
-                </div> 
-    
-                <div class="carrito-producto-subtotal">
-                    <small>Subtotal</small>
-                    <p>${producto.precio * producto.cantidad}</p>
-                </div> 
-    
-                <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button> */
-    
+            /* <button class="menos"><i class="bi bi-dash-lg"></i></button>
+            <button class="plus"><i class="bi bi-plus"></i></button> */
             contenedorCarritoProductos.append(div);
         })
     
@@ -144,9 +82,14 @@ function eliminarDelCarrito(e){
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
 
     productosEnCarrito.splice(index, 1);
+    if (productosEnCarrito.length === 0) {
+        // Si no hay más productos en el carrito, eliminar elementos visuales del carrito.
+        contenedorCarritoProductos.innerHTML = "";
+    }
     cargarProductosCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    console.log(productosEnCarrito)
 }
 
 botonVaciar.addEventListener('click', vaciarCarrito);
@@ -154,6 +97,9 @@ botonVaciar.addEventListener('click', vaciarCarrito);
 function vaciarCarrito(){
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    // Comprobar que se vació el carrito
+    contenedorCarritoProductos.innerHTML = "";
+    console.log(productosEnCarrito)
     cargarProductosCarrito()
 }
 
@@ -173,7 +119,6 @@ function comprarCarrito(){
     contenedorCarritoProductos.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
     contenedorCarritoComprado.classList.remove("disabled");
+    contenedorCarritoProductos.innerHTML = "";
     console.log(contenedorCarritoProductos)
 }
-
-/* CÓDIGO DEL ECOMMERCE DE ROPA - FIN*/
