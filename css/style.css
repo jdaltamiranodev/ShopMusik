@@ -23,7 +23,7 @@ body {
 }
 
 /*css checkout*/
-/* .body-checkout{
+ .body-checkout{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -33,7 +33,7 @@ body {
   height: 100vh;
   margin-top: 5rem;
 
-} */
+} 
 .checkout-container {
   width: 400px;
   padding: 20px;
@@ -298,6 +298,7 @@ img {
  height: 100%;
  /* border: .5rem solid plum; */
  /* transform: rotateZ(90deg); */
+ 
 }
 
 .titulo-producto {
