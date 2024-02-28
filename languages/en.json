@@ -1,10 +1,8 @@
-
 {
 
-  "titulo":  {
-        "titul":"page english",
-        "parrafo":"ENGLISH"
-    }
+    "categoria":"Categories",
+    "accesorio":"Accessories",
+    "amplificador":"amplifier"
 
 }
     

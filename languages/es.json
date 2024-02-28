@@ -1,9 +1,9 @@
- {
+    {
 
-    "titulo":{
+        "categoria":"Categorias",
+        "accesorio":"Accesorios",
+        "amplificador":"amplificador"
 
-        "titul":"pagina en castellano",
-        "parrafo":"datos que se mantienen en castellano"
     }
- }
+ 
  

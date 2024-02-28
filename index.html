@@ -35,9 +35,9 @@
 
             
             <ul class="navegacion-lista">
-               <li><a class="navegacion-lista-enlace" href="categorias.html">Categorias</a></li>
-               <li><a class="navegacion-lista-enlace" href="accesorios.html">Accesorios</a></li>
-               <li><a class="navegacion-lista-enlace" href="amplificadores.html">Amplificadores</a></li>
+               <li><a class="navegacion-lista-enlace" href="categorias.html" data-value="categoria">Categorias</a></li>
+               <li><a class="navegacion-lista-enlace" href="accesorios.html" data-value="accesorio">Accesorios</a></li>
+               <li><a class="navegacion-lista-enlace" href="amplificadores.html" data-value="amplificador">Amplificadores</a></li>
             </ul>
             
             <div class="contenedor-iconos-fecha">
@@ -104,12 +104,23 @@
                 <div class="iconos">
                     <button class="globo-btn"><i class="bi bi-globe"></i></button>
                     <div class="menu-idioma">
-                      <div class="menu-idioma-lista">
-                        <a href="#" data-idioma="es"><img src="img/españa.png" alt="">Es</a>
+                      <div class="menu-idioma-lista" id="flags">
+                        <!-- <a href="#" data-idioma="es"><img src="img/españa.png" alt="">Es</a>
                         <a href="#" data-idioma="en"><img src="img/reino-unido.png" alt="">En</a>
                         <a href="#" data-idioma="eu"><img src="img/euskera.png" alt="">Eu</a>
-                        <a href="#" data-idioma="fr"><img src="img/francia.png" alt="">Fr</a>
-                      </div>
+                        <a href="#" data-idioma="fr"><img src="img/francia.png" alt="">Fr</a> -->
+                        <div class="flags_item" data-languages="es">
+                            <img src="icon/es.svg" > 
+                        </div>
+                
+                        <div class="flags_item" data-languages="en">
+                            <img src="icon/gb.svg" > 
+                        </div>
+
+                        <div class="flags_item" data-languages="eu">
+                            <img src="icon/pv.svg" > 
+                        </div>
+                    </div>
                     </div>
                     <a class="iconos" href="form/form.html"><i class="bi bi-person"></i></a>
                     <a class="iconos" href="carrito.html"><i class="bi bi-cart3"></i></a>
