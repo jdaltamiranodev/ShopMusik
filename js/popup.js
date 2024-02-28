@@ -1,3 +1,4 @@
+/*esto es la animacion y funcionamiento del login -register*/
 /*funcion para mover la animacion del formulario*/
 
 document.getElementById("btn_iniciarSesion").addEventListener("click", iniciarSesion);
@@ -120,28 +121,14 @@ loginForm.addEventListener('submit', (e) =>{
 
 
 
-/* Este codigo es para acceder al local storage y borrar segun la posicion del objeto del array
-
-/ Obtener el array de usuarios del localStorage
-const storedUsers = localStorage.getItem('users');
-const Users = storedUsers ? JSON.parse(storedUsers) : [];
-
-// Supongamos que quieres eliminar la cuenta en la posición 2 del array (índice 1)
-const indiceAEliminar = 1; // Índice de la cuenta a eliminar
-
-// Verificar si el índice está dentro del rango del array
-if (indiceAEliminar >= 0 && indiceAEliminar < Users.length) {
-    // Eliminar la cuenta del array
-    Users.splice(indiceAEliminar, 1);
-
-    // Guardar el array modificado de nuevo en localStorage
-    localStorage.setItem('users', JSON.stringify(Users));
-
-    console.log('La cuenta ha sido eliminada correctamente.');
-} else {
-    console.log('El índice especificado está fuera del rango del array de usuarios.');
-}
-*/
-
-
-
+// Función para mostrar el popup
+function mostrarPopup() {
+    let popup = document.getElementById("popup");
+    popup.style.display = "block";
+    }
+    
+    // Función para cerrar el popup
+    function cerrarPopup() {
+    let popup = document.getElementById("popup");
+    popup.style.display = "none";
+    }

@@ -7,7 +7,6 @@
     <title>Página Carrito</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="carrito.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -39,33 +38,11 @@
     <main>
         <h2 class="titulo-principal">Carrito</h2>
         <div class="caja_grande">
-            <p id="carrito-vacio" class="carrito-vacio"> Tu carrito de compra está vacío. <!-- <i class="bi bi-emoji-frown"></i> --></p>
+            <p id="carrito-vacio" class="carrito-vacio"> Tu carrito de compra está vacío.</p>
             <div id="pajena_carrito" class="pajena_carrito disabled">
-                <!-- <div id="contenedor-carrito-producto" class="contenedor-carrito-producto">
 
-                </div> -->
-                <!-- <div class="product_imagen">
-                    <img src="img/guitara.jpg" alt="imagen" id="foto">
-                </div>
-                <div class="caja_carrito">
-                    <div class="precio">
-                        <h2>Guitarra YAMAHA</h2>
-                        <h1>779,00€</h1>
-                        <p class="iva">IVA INCLUIDO</p>
-                    </div>
-                    <div class="icons_cart">
-                        <i class="bi bi-cart4"></i>
-                        <button class="menos"><i class="bi bi-dash-lg"></i></button>
-                        <span id="cantidad">1</span>
-                        <button class="plus"><i class="bi bi-plus"></i></button>
-                        <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
-                    </div>
-                    <div class="total">
-                        <p>Subtotal:</p>
-                        <p>0 €</p>
-                    </div> 
-                    
-                </div> -->
+                <!-- SE RELLENA DESDE JS CON PRODUCTOS AGREGADOS DEL CARRITO -->
+
             </div> <!-- .pajena_carrito -->
             
             <div id="carrito-acciones" class="carrito-acciones "> <!-- .disabled VOLVER A PONER ESTA CLASE a carrito-acciones --> 
@@ -77,35 +54,14 @@
                         <p id="producto-carrito-total" class="producto-carrito-total">Total:</p>
                         <p id="total">$3000</p>
                     </div>
-                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora <i class="bi bi-arrow-right"></i> </button>     
+                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Continuar <i class="bi bi-arrow-right"></i> </button>     
                 </div>
             </div> <!-- .carrito-acciones -->
-            <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra <!-- <i class="bi bi-emoji-laughing"></i> --></p>
+            <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra</p>
         </div> <!-- .caja_grande -->
     </main>
     
-    <!-- <div class="contenedor-carrito"> -->
-        <!-- <p id="carrito-vacio" class="carrito-vacio"> Tu carrito de compra está vacío. <i class="bi bi-emoji-frown"></i></p> -->
-        <!-- <div id="carrito-productos" class="carrito-productos disabled"> -->
-            <!-- Aquí los productos agregados al carrito de compras -->
-        <!-- </div>
-        <div id="carrito-acciones" class="carrito-acciones disabled">
-            <div class="carrito-acciones-izquierda">  
-                <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
-            </div>
-            <div class="carrito-acciones-derecha">
-                <div class="carrito-acciones-total">
-                    <p id="producto-carrito-total" class="producto-carrito-total">Total:</p>
-                    <p id="producto-carrito-total-precio" class="producto-carrito-total-precio">$3000</p>
-                </div>
-                <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora <i class="bi bi-arrow-right"></i> </button>     
-            </div>
-        </div> --> <!-- .carrito-acciones -->
-        <!-- <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra <i class="bi bi-emoji-laughing"></i></p>
-    </div> -->  <!-- .contenedor-carrito -->     
-
     <!-- FOOTER -->
-    <!--a partir de aqui el footer-->
     <div class="footer">
         <div class="contain">
             <div class="col">
@@ -149,13 +105,12 @@
             </div>
             <div class="clearfix"></div>
             <footer class="foot">
-                <p> Copyright © 2020 - All rights Reserved - Designed by AhsanParadise </p>
+                <p> Copyright © 2020 - All rights Reserved - Designed by ShopMusik </p>
             </footer>
         </div>
 
 
     </div>
-    <!-- <script src="js/script.js"></script> -->
     <script src="js/carrito.js"></script>
 </body>
 </html>
