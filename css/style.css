@@ -254,7 +254,7 @@ img {
 #popup {
   display: none; /* Por defecto, el popup estará oculto */
   position: fixed;
-  background-image: url(../form/galeria/fondo1.jpg);
+  background-image: url(../img/fondo1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
